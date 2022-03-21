@@ -16,6 +16,8 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 26.0, height: 26.0)
                 .cornerRadius(20.0)
+                .padding(9.0) // this padding and the below modifer gives a round outer to the image
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20.0, style: .continuous))
             Text("SwiftUI for iOS 15")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -34,9 +36,15 @@ struct ContentView: View {
         .padding(.all, 20.0)
         .padding(.vertical, 20.0) // padding inside the card top and bottom
         .frame(height: 350.0)
-        .background(.ultraThinMaterial) // using instead of Color("Background")
-        .cornerRadius(30.0)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30.0, style: .continuous)) // using instead of Color("Background"), in: gives the same effect as using a .mask()
+//        .cornerRadius(30.0)
+//        .mask(RoundedRectangle(cornerRadius: 30.0, style: .continuous)) // mask is similar to cornerRadius
         .shadow(color: Color("Shadow").opacity(0.3), radius: 10.0, x: 0.0, y: 10.0)
+        .overlay(
+            RoundedRectangle(cornerRadius: 30.0, style: .continuous)
+                .stroke(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.1)], startPoint: .top, endPoint: .bottom))
+                .blendMode(.overlay)
+        )
         .padding(.horizontal, 20.0) // padding on the outer horizontal
         .background(
             Image("Blob 1")
@@ -48,9 +56,8 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 230)
                 .offset(x: 32, y: -80)
-            
-                
         )
+        
     }
 }
 

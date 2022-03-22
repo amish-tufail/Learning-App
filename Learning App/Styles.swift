@@ -22,7 +22,7 @@ struct StrokeStyle: ViewModifier {
                     )
                 )
                 .blendMode(.overlay)
-        )
+        ) // This is for that gradient type effect at the borders
     }
 }
 

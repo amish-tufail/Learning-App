@@ -12,6 +12,7 @@
 		FE07C83E27E84CDB0018049F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE07C83D27E84CDB0018049F /* Assets.xcassets */; };
 		FE07C84127E84CDB0018049F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE07C84027E84CDB0018049F /* Preview Assets.xcassets */; };
 		FE47C24927E9111E003E18BF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24827E9111E003E18BF /* Styles.swift */; };
+		FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24C27E973D9003E18BF /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FE07C83D27E84CDB0018049F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE07C84027E84CDB0018049F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE47C24827E9111E003E18BF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		FE47C24C27E973D9003E18BF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				FE47C24827E9111E003E18BF /* Styles.swift */,
 				FE07C83D27E84CDB0018049F /* Assets.xcassets */,
 				FE07C83F27E84CDB0018049F /* Preview Content */,
+				FE47C24C27E973D9003E18BF /* AccountView.swift */,
 			);
 			path = "Learning App";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
 				FE47C24927E9111E003E18BF /* Styles.swift in Sources */,
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,

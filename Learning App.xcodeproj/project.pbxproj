@@ -58,9 +58,9 @@
 				FE07C83927E84CD90018049F /* Learning_AppApp.swift */,
 				FE07C83B27E84CD90018049F /* ContentView.swift */,
 				FE47C24827E9111E003E18BF /* Styles.swift */,
+				FE47C24C27E973D9003E18BF /* AccountView.swift */,
 				FE07C83D27E84CDB0018049F /* Assets.xcassets */,
 				FE07C83F27E84CDB0018049F /* Preview Content */,
-				FE47C24C27E973D9003E18BF /* AccountView.swift */,
 			);
 			path = "Learning App";
 			sourceTree = "<group>";

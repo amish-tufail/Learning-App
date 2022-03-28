@@ -13,6 +13,8 @@
 		FE07C84127E84CDB0018049F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE07C84027E84CDB0018049F /* Preview Assets.xcassets */; };
 		FE47C24927E9111E003E18BF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24827E9111E003E18BF /* Styles.swift */; };
 		FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24C27E973D9003E18BF /* AccountView.swift */; };
+		FE5627A527F0DE4700E74D05 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5627A427F0DE4700E74D05 /* HexagonView.swift */; };
+		FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5627A627F2351C00E74D05 /* BlobView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		FE07C84027E84CDB0018049F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE47C24827E9111E003E18BF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		FE47C24C27E973D9003E18BF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		FE5627A427F0DE4700E74D05 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
+		FE5627A627F2351C00E74D05 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				FE07C83B27E84CD90018049F /* ContentView.swift */,
 				FE47C24827E9111E003E18BF /* Styles.swift */,
 				FE47C24C27E973D9003E18BF /* AccountView.swift */,
+				FE5627A427F0DE4700E74D05 /* HexagonView.swift */,
+				FE5627A627F2351C00E74D05 /* BlobView.swift */,
 				FE07C83D27E84CDB0018049F /* Assets.xcassets */,
 				FE07C83F27E84CDB0018049F /* Preview Content */,
 			);
@@ -144,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
+				FE5627A527F0DE4700E74D05 /* HexagonView.swift in Sources */,
 				FE47C24927E9111E003E18BF /* Styles.swift in Sources */,
+				FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */,
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,
 			);

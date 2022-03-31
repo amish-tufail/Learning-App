@@ -22,7 +22,7 @@ struct BlobView: View {
             }
             .frame(width: 400, height: 414)
             .rotationEffect(.degrees(appear ? 360 : 0))
-//            .animation(.linear(duration: 20).repeatForever(autoreverses: true)) // This method cannot be used anymore in swift
+//            .animation(.linear(duration: 20).repeatForever(autoreverses: true)) // This method cannot be used anymore in swift 
         }
         .onAppear {
             withAnimation(.linear(duration: 20).repeatForever(autoreverses: true)) {

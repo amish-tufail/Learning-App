@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Learning App
 //
-//  Created by Amish Tufail on 21/03/2022.
+//  Created by Amish Tufail on 11/04/2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer() // pushed everything to bottom from image to mutlitext
@@ -58,9 +58,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            
+        HomeView()
     }
-} 
+}

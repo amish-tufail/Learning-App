@@ -20,7 +20,7 @@ struct ContentView: View {
                 case .notifications:
                     AccountView()
                 case .library:
-                    AccountView()
+                    AccountView() 
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity) // adjusts the screens of views

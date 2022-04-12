@@ -15,7 +15,7 @@ struct TabItem: Identifiable {
     var color: Color
 }
 
-var tabitems = [
+var tabitems = [ // Data and acts as a view model
     TabItem(text: "Learn Now", icon: "house", tab: .home, color: .teal),
     TabItem(text: "Explore", icon: "magnifyingglass", tab: .explore, color: .blue),
     TabItem(text: "Notifications", icon: "bell", tab: .notifications, color: .red),

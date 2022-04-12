@@ -22,6 +22,7 @@
 		FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0B28049EEC0079386A /* NavigationBar.swift */; };
 		FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */; };
 		FE8DEA102805F4B00079386A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */; };
+		FE8DEA122805FF8A0079386A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA112805FF8A0079386A /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FE8DEA0B28049EEC0079386A /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
+		FE8DEA112805FF8A0079386A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				FE108DA727F25E7400D022B1 /* Tab.swift */,
 				FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */,
+				FE8DEA112805FF8A0079386A /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */,
 				FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */,
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
+				FE8DEA122805FF8A0079386A /* Course.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,
 				FE8DEA0A28049D5B0079386A /* FeaturedItem.swift in Sources */,
 				FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */,

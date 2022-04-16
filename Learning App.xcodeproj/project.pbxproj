@@ -23,6 +23,10 @@
 		FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */; };
 		FE8DEA102805F4B00079386A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */; };
 		FE8DEA122805FF8A0079386A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA112805FF8A0079386A /* Course.swift */; };
+		FEE2AC3D2809DCB200FD9C2B /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC3C2809DCB100FD9C2B /* MatchedView.swift */; };
+		FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */; };
+		FEE2AC41280AE43000FD9C2B /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC40280AE43000FD9C2B /* CourseView.swift */; };
+		FEE2AC43280AEE1500FD9C2B /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC42280AEE1500FD9C2B /* Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		FE8DEA112805FF8A0079386A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FEE2AC3C2809DCB100FD9C2B /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		FEE2AC40280AE43000FD9C2B /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		FEE2AC42280AEE1500FD9C2B /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,8 @@
 			children = (
 				FE8DEA012804964C0079386A /* HomeView.swift */,
 				FE47C24C27E973D9003E18BF /* AccountView.swift */,
+				FEE2AC3C2809DCB100FD9C2B /* MatchedView.swift */,
+				FEE2AC40280AE43000FD9C2B /* CourseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +130,7 @@
 				FE5627A427F0DE4700E74D05 /* HexagonView.swift */,
 				FE5627A627F2351C00E74D05 /* BlobView.swift */,
 				FE8DEA0928049D5B0079386A /* FeaturedItem.swift */,
+				FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 			children = (
 				FE47C24827E9111E003E18BF /* Styles.swift */,
 				FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */,
+				FEE2AC42280AEE1500FD9C2B /* Animations.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -215,15 +227,19 @@
 			files = (
 				FE8DEA022804964C0079386A /* HomeView.swift in Sources */,
 				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
+				FEE2AC41280AE43000FD9C2B /* CourseView.swift in Sources */,
 				FE5627A527F0DE4700E74D05 /* HexagonView.swift in Sources */,
 				FE47C24927E9111E003E18BF /* Styles.swift in Sources */,
+				FEE2AC3D2809DCB200FD9C2B /* MatchedView.swift in Sources */,
 				FE108DA827F25E7400D022B1 /* Tab.swift in Sources */,
 				FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */,
 				FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */,
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
 				FE8DEA122805FF8A0079386A /* Course.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,
+				FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */,
 				FE8DEA0A28049D5B0079386A /* FeaturedItem.swift in Sources */,
+				FEE2AC43280AEE1500FD9C2B /* Animations.swift in Sources */,
 				FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */,
 				FE5627AB27F24F1C00E74D05 /* TabBar.swift in Sources */,
 				FE8DEA102805F4B00079386A /* AnimatableFontModifier.swift in Sources */,

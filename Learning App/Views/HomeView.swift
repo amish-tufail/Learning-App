@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @State var hasScrolled = false
+    @Namespace var namespace
+    @State var show = false
+    @State var showStatusBar = true
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea() // OffWhite Color
@@ -17,18 +20,22 @@ struct HomeView: View {
                 
                 featured
                 
-                Color.clear.frame(height: 1000)
+                Text("Courses".uppercased())
+                    .font(.footnote.weight(.semibold))
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                if !show {
+                    CourseItem(namespace: namespace, show: $show)
+                        .onTapGesture {
+                            withAnimation(.openCard) {
+                                show.toggle()
+                                showStatusBar = false
+                            }
+                        }
+                }
             }
             .coordinateSpace(name: "scroll") // to make the coordinates according to the scroll
-            .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-                withAnimation(.easeInOut) {
-                    if value < 0 {
-                        hasScrolled = true
-                    } else {
-                        hasScrolled = false
-                    }
-                }
-            })
             .safeAreaInset(edge: .top, content: {
                 Color.clear.frame(height: 70)
             })
@@ -36,6 +43,20 @@ struct HomeView: View {
                 NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
                 // .opacity(hasScrolled ? 1 : 0) // as it is on nav bar as a whole so it dissappears
             )
+            if show {
+                CourseView(namespace: namespace, show: $show)
+            }
+            
+        }
+        .statusBar(hidden: !showStatusBar)
+        .onChange(of: show) { newValue in
+            withAnimation(.closeCard) {
+                if newValue {
+                    showStatusBar = false
+                } else {
+                    showStatusBar = true
+                }       
+            }
         }
     }
     var scrollDetection: some View {
@@ -44,6 +65,15 @@ struct HomeView: View {
             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
         }
         .frame(height: 0)
+        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            withAnimation(.easeInOut) {
+                if value < 0 {
+                    hasScrolled = true
+                } else {
+                    hasScrolled = false
+                }
+            }
+        })
     }
     
     var featured: some View {

@@ -12,6 +12,7 @@ struct HomeView: View {
     @Namespace var namespace
     @State var show = false
     @State var showStatusBar = true
+    @State var selectedID = UUID()
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea() // OffWhite Color
@@ -26,16 +27,21 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
                 if !show {
-                    CourseItem(namespace: namespace, show: $show)
-                        .onTapGesture {
-                            withAnimation(.openCard) {
-                                show.toggle()
-                                showStatusBar = false
-                            }
-                        }
+                    cards
+                } else {
+                    // Here to solve the problem of view going back to top, as when we go to course view then everything vanishes at the back so to solve this we create the sem dummy cards so that view doesnt go back to top
+                    ForEach(courses) { course in
+                        Rectangle()
+                            .fill(.white)
+                            .frame(height: 300)
+                            .cornerRadius(30)
+                            .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                            .opacity(0.3)
+                            .padding(.horizontal, 30)
+                    }
                 }
             }
-            .coordinateSpace(name: "scroll") // to make the coordinates according to the scroll
+            .coordinateSpace(name: "scroll") // to make the coordinates  according to the scroll
             .safeAreaInset(edge: .top, content: {
                 Color.clear.frame(height: 70)
             })
@@ -44,7 +50,7 @@ struct HomeView: View {
                 // .opacity(hasScrolled ? 1 : 0) // as it is on nav bar as a whole so it dissappears
             )
             if show {
-                CourseView(namespace: namespace, show: $show)
+                detail
             }
             
         }
@@ -78,7 +84,7 @@ struct HomeView: View {
     
     var featured: some View {
         TabView { // to make the cards horizontally swipeable
-            ForEach(courses) { course in
+            ForEach(featuredCourses) { course in
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
                     FeaturedItem(course: course)
@@ -105,6 +111,32 @@ struct HomeView: View {
             Image("Blob 1")
                 .offset(x: 250, y: -100)
         )
+    }
+    
+    var cards: some View {
+        ForEach(courses) { course in
+            CourseItem(namespace: namespace, course: course, show: $show)
+                .onTapGesture {
+                    withAnimation(.openCard) {
+                        show.toggle()
+                        showStatusBar = false
+                        selectedID = course.id
+                    }
+            }
+        }
+    }
+    
+    var detail: some  View {
+        ForEach(courses) { course in
+            if course.id == selectedID {
+                CourseView(namespace: namespace, course: course, show: $show)
+                    .zIndex(1) // a level higher than the default zero
+                    .transition(.asymmetric(
+                        insertion: .opacity.animation(.easeInOut(duration: 0.1)),
+                        removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2)))
+                )
+            }
+        }
     }
 } 
 

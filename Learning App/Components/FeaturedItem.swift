@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FeaturedItem: View {
-    var course: Course = courses[0] // Default value for the preview only
+    var course: Course = featuredCourses[0] // Default value for the preview only
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer() // pushed everything to bottom from image to mutlitext

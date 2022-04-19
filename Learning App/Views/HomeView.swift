@@ -10,9 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @State var hasScrolled = false
     @Namespace var namespace
-    @State var show = false
+    @State var show = false // to show Course Item on false and Course View on true
     @State var showStatusBar = true
     @State var selectedID = UUID()
+    @EnvironmentObject var model: Model
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea() // OffWhite Color
@@ -26,20 +27,24 @@ struct HomeView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
-                if !show {
-                    cards
-                } else {
-                    // Here to solve the problem of view going back to top, as when we go to course view then everything vanishes at the back so to solve this we create the sem dummy cards so that view doesnt go back to top
-                    ForEach(courses) { course in
-                        Rectangle()
-                            .fill(.white)
-                            .frame(height: 300)
-                            .cornerRadius(30)
-                            .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
-                            .opacity(0.3)
-                            .padding(.horizontal, 30)
+                
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {  // using to layout for different screen sizes, spacing is for rows here, inner spacing is for column
+                    if !show {
+                        cards
+                    } else {
+                        // Here to solve the problem of view going back to top, as when we go to course view then everything vanishes at the back so to solve this we create the sem dummy cards so that view doesnt go back to top
+                        ForEach(courses) { course in
+                            Rectangle()
+                                .fill(.white)
+                                .frame(height: 300)
+                                .cornerRadius(30)
+                                .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                                .opacity(0.3)
+                                .padding(.horizontal, 30)
+                        }
                     }
                 }
+                .padding(.horizontal, 20)
             }
             .coordinateSpace(name: "scroll") // to make the coordinates  according to the scroll
             .safeAreaInset(edge: .top, content: {
@@ -88,6 +93,8 @@ struct HomeView: View {
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
                     FeaturedItem(course: course)
+                        .frame(maxWidth: 500)
+                        .frame(maxWidth: .infinity)
                         .padding(.vertical, 40)
                         .rotation3DEffect(.degrees(minX / -10), axis: (x: 0, y: 1, z: 0))
                         .shadow(color: Color("Shadow").opacity(0.3), radius: 10.0, x: 0.0, y: 10.0) // here shadow applies to every single item as the card is not clipped, so to clip the card we will remove the 'in' thing in the background and use mask in its place as mask clips the card
@@ -119,6 +126,7 @@ struct HomeView: View {
                 .onTapGesture {
                     withAnimation(.openCard) {
                         show.toggle()
+                        model.showDetail.toggle() // toggles for tab bar
                         showStatusBar = false
                         selectedID = course.id
                     }
@@ -143,6 +151,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            
+            .environmentObject(Model()) 
     }
 }

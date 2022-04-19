@@ -10,6 +10,8 @@ import SwiftUI
 struct NavigationBar: View {
     var title = ""
     @Binding var hasScrolled: Bool
+    @State var showSearch = false // to show the search view on click
+    @State var showAccount = false // to show the Account view on click
     var body: some View {
         ZStack {
             Color.clear
@@ -24,19 +26,33 @@ struct NavigationBar: View {
                 .padding(.top, 20)
                 .offset(y: hasScrolled ? -4 : 0) // to move the title a little bit up when scrolled
             HStack(spacing: 16) {
-                Image(systemName: "magnifyingglass")
-                    .font(.body.weight(.bold))
-                    .frame(width: 36, height: 36)
-                    .foregroundColor(.secondary)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                Button {
+                    showSearch = true
+                } label: {
+                    Image(systemName: "magnifyingglass")
+                        .font(.body.weight(.bold))
+                        .frame(width: 36, height: 36)
+                        .foregroundColor(.secondary)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .strokeStyle(cornerRadius: 14)
-                Image("Avatar Default")
-                    .resizable()
-                    .frame(width: 26, height: 26)
-                    .cornerRadius(10)
-                    .padding(8)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                }
+                .sheet(isPresented: $showSearch) { // to open search view 
+                    SearchView()
+                }
+                Button {
+                    showAccount = true
+                } label: {
+                    Image("Avatar Default")
+                        .resizable()
+                        .frame(width: 26, height: 26)
+                        .cornerRadius(10)
+                        .padding(8)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .strokeStyle(cornerRadius: 18)
+                }
+                .sheet(isPresented: $showAccount) { // to show Account View on click
+                    AccountView()
+                }
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(.trailing, 20)

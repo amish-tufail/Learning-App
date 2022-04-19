@@ -9,14 +9,19 @@ import SwiftUI
 
 struct SearchView: View {
     @State var text = ""
+    @Environment(\.presentationMode) var presentationModel // for Done Button
     var body: some View {
         NavigationView {
-            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            List {                                               // or show all when nothing in field
+                ForEach(courses.filter { $0.title.contains(text) || text == "" }) { item in
+                    Text(item.title)
+                }
+                // courses.filter { $0.title.contains(text)} filter out the result based on what gets typed in text field
             }
-            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always)) // for the search field
-            .navigationBarTitleDisplayMode(.inline) // to make the search bar not go in to larger mode
+            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("SwiftUI, React, UI Design")) // for the search field
             .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.inline) // to make the search bar not go in to larger mode
+            .navigationBarItems(trailing: Button { presentationModel.wrappedValue.dismiss() } label: { Text("Done").bold() }) // Adds the Done button
         }
     }
 }

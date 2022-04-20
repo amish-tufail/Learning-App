@@ -13,6 +13,8 @@ struct HomeView: View {
     @State var show = false // to show Course Item on false and Course View on true
     @State var showStatusBar = true
     @State var selectedID = UUID()
+    @State var showCourse = false // For Featured -> Course View
+    @State var selectedIndex = 0 // For Featured -> Course View
     @EnvironmentObject var model: Model
     var body: some View {
         ZStack {
@@ -89,7 +91,7 @@ struct HomeView: View {
     
     var featured: some View {
         TabView { // to make the cards horizontally swipeable
-            ForEach(featuredCourses) { course in
+            ForEach(Array(featuredCourses.enumerated()), id: \.offset) { index, course in
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
                     FeaturedItem(course: course)
@@ -107,6 +109,10 @@ struct HomeView: View {
                                 .offset(x: 32, y: -80) // for normal postioning
                                 .offset(x: minX / 2) // for parallex effect
                     )
+                        .onTapGesture { // button option also can be implemented instead of this
+                            showCourse = true
+                            selectedIndex = index
+                        }
 //                    Text("\(proxy.frame(in: .global).minX)")
                 }
                 
@@ -118,6 +124,9 @@ struct HomeView: View {
             Image("Blob 1")
                 .offset(x: 250, y: -100)
         )
+        .sheet(isPresented: $showCourse) {
+            CourseView(namespace: namespace, course: featuredCourses[selectedIndex],  show: $showCourse)
+        }
     }
     
     var cards: some View {

@@ -10,8 +10,9 @@ import SwiftUI
 struct NavigationBar: View {
     var title = ""
     @Binding var hasScrolled: Bool
-    @State var showSearch = false // to show the search view on click
-    @State var showAccount = false // to show the Account view on click
+    @State var showSearch = false // To show the search view on click
+    @State var showAccount = false // To show the Account view on click
+    @AppStorage("showModal") var showModal = false // To connect Modal to the nav bar
     var body: some View {
         ZStack {
             Color.clear
@@ -24,7 +25,7 @@ struct NavigationBar: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
                 .padding(.top, 20)
-                .offset(y: hasScrolled ? -4 : 0) // to move the title a little bit up when scrolled
+                .offset(y: hasScrolled ? -4 : 0) // To move the title a little bit up when scrolled
             HStack(spacing: 16) {
                 Button {
                     showSearch = true
@@ -40,7 +41,10 @@ struct NavigationBar: View {
                     SearchView()
                 }
                 Button {
-                    showAccount = true
+//                    showAccount = true
+                    withAnimation {
+                        showModal = true
+                    }
                 } label: {
                     Image("Avatar Default")
                         .resizable()
@@ -53,6 +57,7 @@ struct NavigationBar: View {
                 .sheet(isPresented: $showAccount) { // to show Account View on click
                     AccountView()
                 }
+
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(.trailing, 20)

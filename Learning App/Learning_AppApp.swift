@@ -12,7 +12,7 @@ struct Learning_AppApp: App {
     @StateObject var model = Model() // state object ensures that we will not call this many time
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignUpView()
                 .environmentObject(model)
         }
     }

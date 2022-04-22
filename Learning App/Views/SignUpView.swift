@@ -17,10 +17,31 @@ struct SignUpView: View {
             Button {} label: {
                 Text("Create Account")
                     .frame(maxWidth: .infinity)
+                    .gradientForeground(colors: [.pink, .blue, .purple, .pink])
+                
             }
-            .buttonStyle(.borderedProminent)
+//            .buttonStyle(.borderedProminent)
+//            .buttonStyle(AngularButtonStyle())
+            .font(.headline)
+            .buttonStyle(.angular) 
             .tint(.blue)
             .controlSize(.large) // Button Size
+            Group {
+                Text("By clicking on  ")
+                + Text("_Create Account_")
+                    .foregroundColor(.primary.opacity(0.7))
+                + Text(", you agree to out **Terms of Service** and **[Privacy Policy](https://apple.com)**")
+                Divider()
+                HStack {
+                    Text("Already have an account?")
+                    Button {} label: {
+                        Text("**Sign in**")
+                    }
+                }
+            }
+            .font(.footnote)
+            .foregroundColor(.secondary)
+            .accentColor(.secondary)
         }
         .padding(20) // Internal Padding
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -31,6 +52,18 @@ struct SignUpView: View {
             Image("Blob 1")
                 .offset(x: 200, y: -100)
         )
+    }
+}
+
+extension View {
+    public func gradientForeground(colors: [Color]) -> some View {
+        self.overlay(
+            LinearGradient(
+                colors: colors,
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
+        )
+            .mask(self)
     }
 }
 

@@ -32,6 +32,8 @@
 		FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */; };
 		FEE2AC41280AE43000FD9C2B /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC40280AE43000FD9C2B /* CourseView.swift */; };
 		FEE2AC43280AEE1500FD9C2B /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC42280AEE1500FD9C2B /* Animations.swift */; };
+		FEE5DE9A281306190088583F /* InputFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DE99281306180088583F /* InputFile.swift */; };
+		FEE5DE9C281321E90088583F /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DE9B281321E90088583F /* GradientText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		FEE2AC40280AE43000FD9C2B /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		FEE2AC42280AEE1500FD9C2B /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		FEE5DE99281306180088583F /* InputFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFile.swift; sourceTree = "<group>"; };
+		FEE5DE9B281321E90088583F /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */,
 				FEE2AC42280AEE1500FD9C2B /* Animations.swift */,
 				FE6BE6DF28104018002BBF83 /* AngularButtonStyle.swift */,
+				FEE5DE99281306180088583F /* InputFile.swift */,
+				FEE5DE9B281321E90088583F /* GradientText.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				FED6ABC3280F216D0072A961 /* SearchView.swift in Sources */,
 				FE8DEA022804964C0079386A /* HomeView.swift in Sources */,
+				FEE5DE9A281306190088583F /* InputFile.swift in Sources */,
 				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
 				FEE2AC41280AE43000FD9C2B /* CourseView.swift in Sources */,
 				FE5627A527F0DE4700E74D05 /* HexagonView.swift in Sources */,
@@ -255,6 +262,7 @@
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
 				FE8DEA122805FF8A0079386A /* Course.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,
+				FEE5DE9C281321E90088583F /* GradientText.swift in Sources */,
 				FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */,
 				FE8DEA0A28049D5B0079386A /* FeaturedItem.swift in Sources */,
 				FE6BE6DE28103036002BBF83 /* SignUpView.swift in Sources */,

@@ -10,17 +10,25 @@ import SwiftUI
 struct AccountView: View {
     @State var isDeleted = false
     @State var isPinned = false
-    @Environment(\.presentationMode) var presentationModel // for Done Button
+    @Environment(\.dismiss) var dismiss // for Done Button
+    @AppStorage("isLogged") var isLogged = false
     var body: some View {
         NavigationView {
             List {
                 profile
                 menu
                 links
+                Button {
+                    isLogged = false
+                    dismiss()
+                } label: {
+                    Text("Sign out")
+                        .tint(.red)
+                }
             }
             .listStyle(.insetGrouped) // would adopt automatic to different devices
             .navigationTitle("Account")
-            .navigationBarItems(trailing: Button { presentationModel.wrappedValue.dismiss() } label: { Text("Done").bold() })
+            .navigationBarItems(trailing: Button { dismiss() } label: { Text("Done").bold() })
         }
     }
     

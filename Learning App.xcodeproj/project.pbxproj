@@ -36,6 +36,7 @@
 		FEE5DE9C281321E90088583F /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DE9B281321E90088583F /* GradientText.swift */; };
 		FEE5DE9E28136E300088583F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DE9D28136E300088583F /* ModalView.swift */; };
 		FEE5DEA028136F100088583F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DE9F28136F100088583F /* SignInView.swift */; };
+		FEE5DEA328145CE70088583F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5DEA228145CE60088583F /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		FEE5DE9B281321E90088583F /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		FEE5DE9D28136E300088583F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		FEE5DE9F28136F100088583F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FEE5DEA228145CE60088583F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				FE5627A627F2351C00E74D05 /* BlobView.swift */,
 				FE8DEA0928049D5B0079386A /* FeaturedItem.swift */,
 				FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */,
+				FEE5DEA228145CE60088583F /* AvatarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				FED6ABC5280F2BCE0072A961 /* Suggestion.swift in Sources */,
 				FE47C24927E9111E003E18BF /* Styles.swift in Sources */,
 				FEE5DE9E28136E300088583F /* ModalView.swift in Sources */,
+				FEE5DEA328145CE70088583F /* AvatarView.swift in Sources */,
 				FEE2AC3D2809DCB200FD9C2B /* MatchedView.swift in Sources */,
 				FE108DA827F25E7400D022B1 /* Tab.swift in Sources */,
 				FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */,

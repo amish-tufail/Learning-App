@@ -16,6 +16,7 @@ struct HomeView: View {
     @State var showCourse = false // For Featured -> Course View
     @State var selectedIndex = 0 // For Featured -> Course View
     @EnvironmentObject var model: Model
+    @AppStorage("isLiteMode") var isLiteMode = true
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea() // OffWhite Color
@@ -99,7 +100,7 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 40)
                         .rotation3DEffect(.degrees(minX / -10), axis: (x: 0, y: 1, z: 0))
-                        .shadow(color: Color("Shadow").opacity(0.3), radius: 10.0, x: 0.0, y: 10.0) // here shadow applies to every single item as the card is not clipped, so to clip the card we will remove the 'in' thing in the background and use mask in its place as mask clips the card
+                        .shadow(color: Color("Shadow").opacity(isLiteMode ? 0 : 0.3), radius: 5.0, x: 0.0, y: 3.0) // here shadow applies to every single item as the card is not clipped, so to clip the card we will remove the 'in' thing in the background and use mask in its place as mask clips the card
                         .blur(radius: abs(minX) / 40) // abs = absolute 
                         .overlay(
                             Image(course.image)

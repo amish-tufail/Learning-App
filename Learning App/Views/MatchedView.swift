@@ -10,7 +10,6 @@ import SwiftUI
 struct MatchedView: View {
     @Namespace var namespace
     @State var show = false
-    
     var body: some View {
         
         ZStack {

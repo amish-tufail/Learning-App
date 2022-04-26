@@ -18,7 +18,7 @@ struct FeaturedItem: View {
                 .frame(width: 26.0, height: 26.0)
                 .cornerRadius(10.0)
                 .padding(9.0) // this padding and the below modifer gives a round outer to the image
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16.0, style: .continuous))
+                .background(Color(UIColor.systemBackground).opacity(0.1), in: RoundedRectangle(cornerRadius: 16.0, style: .continuous))
                 .strokeStyle(cornerRadius: 16.0)
             Text(course.title)
                 .font(.largeTitle)

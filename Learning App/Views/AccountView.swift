@@ -12,11 +12,18 @@ struct AccountView: View {
     @State var isPinned = false
     @Environment(\.dismiss) var dismiss // for Done Button
     @AppStorage("isLogged") var isLogged = false
+    @AppStorage("isLiteMode") var isLiteMode = true
     var body: some View {
         NavigationView {
             List {
                 profile
                 menu
+                Section {
+                    Toggle(isOn: $isLiteMode) {
+                        Label("Lite Mode", systemImage: isLiteMode ? "tortoise" : "hare")
+                    }
+                }
+                .accentColor(.primary)
                 links
                 Button {
                     isLogged = false
@@ -25,6 +32,9 @@ struct AccountView: View {
                     Text("Sign out")
                         .tint(.red)
                 }
+                
+            }
+            .refreshable { // For refreshing 
             }
             .listStyle(.insetGrouped) // would adopt automatic to different devices
             .navigationTitle("Account")

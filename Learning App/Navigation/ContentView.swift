@@ -19,9 +19,9 @@ struct ContentView: View {
             case .explore:
                 ExploreView()
             case .notifications:
-                AccountView()
+                NotficationsView()
             case .library:
-                AccountView()
+                LibraryView ()
             }
             // Both methods are ok
 //            if !model.showDetail {
@@ -33,10 +33,11 @@ struct ContentView: View {
             if showModal {
                 ModalView()
                     .zIndex(1)
+                    .accessibilityAddTraits(.isModal) // For voiceover
             }
         }
         .safeAreaInset(edge: .bottom) {
-            Color.clear.frame(height: 44)
+            Color.clear.frame(height: 88)
         }
         .dynamicTypeSize(.large ... .xxLarge) // Applies to all the views
     }

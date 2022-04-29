@@ -13,7 +13,7 @@ struct TabBar: View {
     @State var tabItemWidth: CGFloat = 0
     var body: some View {
         GeometryReader { proxy in // to fix tab bar for different devices
-            let hasHomeIndicator = proxy.safeAreaInsets.bottom > 20// to know the size of the bottom
+            let hasHomeIndicator = proxy.safeAreaInsets.bottom - 88 > 20// to know the size of the bottom
             HStack {
                 buttons
             }

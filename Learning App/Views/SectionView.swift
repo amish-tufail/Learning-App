@@ -16,7 +16,7 @@ struct SectionView: View {
         ZStack {
             ScrollView {
                 cover
-                
+                    .overlay(PlayView().overlay(CircularView(value: section.progress, lineWidth: 5).padding(24)))
                 content
                     .offset(y: 120)
                     .padding(.bottom, 200)
@@ -48,7 +48,7 @@ struct SectionView: View {
                 .aspectRatio(contentMode: .fill)
         )
         .mask(
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
+            RoundedRectangle(cornerRadius: 0, style: .continuous)
         )
         .overlay(
             overlayContent

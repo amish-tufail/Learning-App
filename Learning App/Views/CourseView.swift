@@ -84,7 +84,7 @@ struct CourseView: View {
             .mask(
                 {
                     // cornerRadius: appear[0] ? 0 : 30.0, style: .continuous
-                    RoundedRectangle(cornerRadius: 30.0, style: .continuous) // appear rmoves the corner radius on the background when the view is loaded completely
+                    RoundedRectangle(cornerRadius: 0, style: .continuous) // appear rmoves the corner radius on the background when the view is loaded completely
                         .matchedGeometryEffect(id: "mask\(course.id)", in: namespace)
                         .offset(y: scrollY > 0 ? -scrollY : 0) // For parallex Effect, here it clips the content
                 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct FeaturedItem: View {
     var course: Course = featuredCourses[0] // Default value for the preview only
+    @Environment(\.sizeCategory) var sizeCategory
     var body: some View {
-        VStack(alignment: .leading, spacing: 8.0) {
+        VStack(alignment: .leading, spacing: 8.0) { 
             Spacer() // pushed everything to bottom from image to mutlitext
             Image(course.logo)
                 .resizable(resizingMode: .stretch) // from inspector
@@ -25,6 +26,7 @@ struct FeaturedItem: View {
                 .fontWeight(.bold)
                 .foregroundStyle(.linearGradient(colors: [.primary, .primary.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing))
                 .lineLimit(1)
+                .dynamicTypeSize(.large)
             Text(course.subtitle.uppercased())
                 .font(.footnote)
                 .fontWeight(.semibold)
@@ -32,7 +34,7 @@ struct FeaturedItem: View {
             Text(course.text)
                 .font(.footnote)
                 .multilineTextAlignment(.leading) // from inspector
-                .lineLimit(2)
+                .lineLimit(sizeCategory > .large ? 1: 2)
                 .frame(maxWidth: .infinity, alignment: .leading) // infinity = max possible space occupied
                 .foregroundColor(.secondary)
         }

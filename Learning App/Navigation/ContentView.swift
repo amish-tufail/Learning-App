@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var shoudlShowOnboarding: Bool = true
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @AppStorage("showModal") var showModal = false // To connect Modal to the nav bar
     @EnvironmentObject var model: Model
@@ -40,6 +41,9 @@ struct ContentView: View {
             Color.clear.frame(height: 88)
         }
         .dynamicTypeSize(.large ... .xxLarge) // Applies to all the views
+        .fullScreenCover(isPresented: $shoudlShowOnboarding) {
+            Onboarding(shoudlShowOnboarding: $shoudlShowOnboarding)
+        }
     }
 }
 

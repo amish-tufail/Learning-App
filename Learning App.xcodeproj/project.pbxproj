@@ -40,8 +40,42 @@
 		FED59384281C66F70087FE3D /* NotficationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED59383281C66F70087FE3D /* NotficationsView.swift */; };
 		FED59386281C68510087FE3D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED59385281C68510087FE3D /* LibraryView.swift */; };
 		FED59388281C68FF0087FE3D /* CertificateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED59387281C68FF0087FE3D /* CertificateView.swift */; };
+		FED5938B281D0C680087FE3D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5938A281D0C680087FE3D /* Onboarding.swift */; };
 		FED6ABC3280F216D0072A961 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6ABC2280F216C0072A961 /* SearchView.swift */; };
 		FED6ABC5280F2BCE0072A961 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6ABC4280F2BCE0072A961 /* Suggestion.swift */; };
+		FEE21CB2281D132A00752B8C /* Wave1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C94281D132700752B8C /* Wave1.swift */; };
+		FEE21CB3281D132A00752B8C /* BackG1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C95281D132800752B8C /* BackG1.swift */; };
+		FEE21CB4281D132A00752B8C /* Line2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C96281D132800752B8C /* Line2.swift */; };
+		FEE21CB5281D132A00752B8C /* BlobShapeTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C97281D132800752B8C /* BlobShapeTop.swift */; };
+		FEE21CB6281D132A00752B8C /* BoomerangLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C98281D132800752B8C /* BoomerangLeft.swift */; };
+		FEE21CB7281D132A00752B8C /* InsideFace4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C99281D132800752B8C /* InsideFace4.swift */; };
+		FEE21CB8281D132A00752B8C /* BigShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9A281D132800752B8C /* BigShape.swift */; };
+		FEE21CB9281D132A00752B8C /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9B281D132800752B8C /* AccountBackground.swift */; };
+		FEE21CBA281D132A00752B8C /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9C281D132800752B8C /* Wave.swift */; };
+		FEE21CBB281D132A00752B8C /* YellowPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9D281D132800752B8C /* YellowPlanet.swift */; };
+		FEE21CBC281D132A00752B8C /* InsideFace1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9E281D132800752B8C /* InsideFace1.swift */; };
+		FEE21CBD281D132A00752B8C /* Line1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21C9F281D132800752B8C /* Line1.swift */; };
+		FEE21CBE281D132A00752B8C /* BoomerangLeftTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA0281D132800752B8C /* BoomerangLeftTop.swift */; };
+		FEE21CBF281D132A00752B8C /* Blob2Graphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA1281D132800752B8C /* Blob2Graphic.swift */; };
+		FEE21CC0281D132A00752B8C /* BackG3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA2281D132900752B8C /* BackG3.swift */; };
+		FEE21CC1281D132A00752B8C /* InsideFace3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA3281D132900752B8C /* InsideFace3.swift */; };
+		FEE21CC2281D132A00752B8C /* RedPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA4281D132900752B8C /* RedPlanet.swift */; };
+		FEE21CC3281D132A00752B8C /* InsideFace2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA5281D132900752B8C /* InsideFace2.swift */; };
+		FEE21CC4281D132A00752B8C /* BackG2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA6281D132900752B8C /* BackG2.swift */; };
+		FEE21CC5281D132A00752B8C /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA7281D132900752B8C /* Stars.swift */; };
+		FEE21CC6281D132A00752B8C /* BoomerangRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA8281D132900752B8C /* BoomerangRight.swift */; };
+		FEE21CC7281D132A00752B8C /* Blob3Graphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CA9281D132900752B8C /* Blob3Graphic.swift */; };
+		FEE21CC8281D132A00752B8C /* MaskBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAA281D132900752B8C /* MaskBlur.swift */; };
+		FEE21CC9281D132A00752B8C /* BackgroundShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAB281D132900752B8C /* BackgroundShapes.swift */; };
+		FEE21CCA281D132A00752B8C /* BoomerangBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAC281D132900752B8C /* BoomerangBG.swift */; };
+		FEE21CCB281D132A00752B8C /* PurplePlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAD281D132900752B8C /* PurplePlanet.swift */; };
+		FEE21CCC281D132A00752B8C /* BG4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAE281D132900752B8C /* BG4.swift */; };
+		FEE21CCD281D132A00752B8C /* Blob1Graphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CAF281D132900752B8C /* Blob1Graphic.swift */; };
+		FEE21CCE281D132A00752B8C /* InsideFace5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CB0281D132A00752B8C /* InsideFace5.swift */; };
+		FEE21CCF281D132A00752B8C /* FaceGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CB1281D132A00752B8C /* FaceGraphic.swift */; };
+		FEE21CD2281D145F00752B8C /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = FEE21CD1281D145F00752B8C /* SwiftUIX */; };
+		FEE21CD6281D374C00752B8C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CD5281D374C00752B8C /* Card.swift */; };
+		FEE21CDA281D40A400752B8C /* OnboardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE21CD9281D40A400752B8C /* OnboardingCard.swift */; };
 		FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */; };
 		FEE2AC41280AE43000FD9C2B /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC40280AE43000FD9C2B /*  .swift */; };
 		FEE2AC43280AEE1500FD9C2B /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2AC42280AEE1500FD9C2B /* Animations.swift */; };
@@ -87,8 +121,41 @@
 		FED59383281C66F70087FE3D /* NotficationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotficationsView.swift; sourceTree = "<group>"; };
 		FED59385281C68510087FE3D /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		FED59387281C68FF0087FE3D /* CertificateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateView.swift; sourceTree = "<group>"; };
+		FED5938A281D0C680087FE3D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		FED6ABC2280F216C0072A961 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		FED6ABC4280F2BCE0072A961 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		FEE21C94281D132700752B8C /* Wave1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave1.swift; sourceTree = "<group>"; };
+		FEE21C95281D132800752B8C /* BackG1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackG1.swift; sourceTree = "<group>"; };
+		FEE21C96281D132800752B8C /* Line2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line2.swift; sourceTree = "<group>"; };
+		FEE21C97281D132800752B8C /* BlobShapeTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlobShapeTop.swift; sourceTree = "<group>"; };
+		FEE21C98281D132800752B8C /* BoomerangLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoomerangLeft.swift; sourceTree = "<group>"; };
+		FEE21C99281D132800752B8C /* InsideFace4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideFace4.swift; sourceTree = "<group>"; };
+		FEE21C9A281D132800752B8C /* BigShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigShape.swift; sourceTree = "<group>"; };
+		FEE21C9B281D132800752B8C /* AccountBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
+		FEE21C9C281D132800752B8C /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		FEE21C9D281D132800752B8C /* YellowPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowPlanet.swift; sourceTree = "<group>"; };
+		FEE21C9E281D132800752B8C /* InsideFace1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideFace1.swift; sourceTree = "<group>"; };
+		FEE21C9F281D132800752B8C /* Line1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line1.swift; sourceTree = "<group>"; };
+		FEE21CA0281D132800752B8C /* BoomerangLeftTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoomerangLeftTop.swift; sourceTree = "<group>"; };
+		FEE21CA1281D132800752B8C /* Blob2Graphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blob2Graphic.swift; sourceTree = "<group>"; };
+		FEE21CA2281D132900752B8C /* BackG3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackG3.swift; sourceTree = "<group>"; };
+		FEE21CA3281D132900752B8C /* InsideFace3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideFace3.swift; sourceTree = "<group>"; };
+		FEE21CA4281D132900752B8C /* RedPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedPlanet.swift; sourceTree = "<group>"; };
+		FEE21CA5281D132900752B8C /* InsideFace2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideFace2.swift; sourceTree = "<group>"; };
+		FEE21CA6281D132900752B8C /* BackG2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackG2.swift; sourceTree = "<group>"; };
+		FEE21CA7281D132900752B8C /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		FEE21CA8281D132900752B8C /* BoomerangRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoomerangRight.swift; sourceTree = "<group>"; };
+		FEE21CA9281D132900752B8C /* Blob3Graphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blob3Graphic.swift; sourceTree = "<group>"; };
+		FEE21CAA281D132900752B8C /* MaskBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskBlur.swift; sourceTree = "<group>"; };
+		FEE21CAB281D132900752B8C /* BackgroundShapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundShapes.swift; sourceTree = "<group>"; };
+		FEE21CAC281D132900752B8C /* BoomerangBG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoomerangBG.swift; sourceTree = "<group>"; };
+		FEE21CAD281D132900752B8C /* PurplePlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurplePlanet.swift; sourceTree = "<group>"; };
+		FEE21CAE281D132900752B8C /* BG4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BG4.swift; sourceTree = "<group>"; };
+		FEE21CAF281D132900752B8C /* Blob1Graphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blob1Graphic.swift; sourceTree = "<group>"; };
+		FEE21CB0281D132A00752B8C /* InsideFace5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideFace5.swift; sourceTree = "<group>"; };
+		FEE21CB1281D132A00752B8C /* FaceGraphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGraphic.swift; sourceTree = "<group>"; };
+		FEE21CD5281D374C00752B8C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FEE21CD9281D40A400752B8C /* OnboardingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCard.swift; sourceTree = "<group>"; };
 		FEE2AC3E280AE33200FD9C2B /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		FEE2AC40280AE43000FD9C2B /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		FEE2AC42280AEE1500FD9C2B /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -104,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE21CD2281D145F00752B8C /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +203,7 @@
 				FE8DEA072804989C0079386A /* Models */,
 				FE8DEA05280498860079386A /* Components */,
 				FE8DEA062804988F0079386A /* Styles */,
+				FED59389281D0C0D0087FE3D /* Onboarding */,
 				FE07C83D27E84CDB0018049F /* Assets.xcassets */,
 				FE07C83F27E84CDB0018049F /* Preview Content */,
 			);
@@ -204,6 +273,7 @@
 				FE5F255A2818612E0071CCE4 /* CourseSection.swift */,
 				FED59375281C06910087FE3D /* Handbook.swift */,
 				FED59379281C0BCB0087FE3D /* Topic.swift */,
+				FEE21CD5281D374C00752B8C /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +340,53 @@
 			path = Graphics;
 			sourceTree = "<group>";
 		};
+		FED59389281D0C0D0087FE3D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FEE21C93281D12EF00752B8C /* Graphics */,
+				FED5938A281D0C680087FE3D /* Onboarding.swift */,
+				FEE21CD9281D40A400752B8C /* OnboardingCard.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FEE21C93281D12EF00752B8C /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				FEE21C9B281D132800752B8C /* AccountBackground.swift */,
+				FEE21C95281D132800752B8C /* BackG1.swift */,
+				FEE21CA6281D132900752B8C /* BackG2.swift */,
+				FEE21CA2281D132900752B8C /* BackG3.swift */,
+				FEE21CAB281D132900752B8C /* BackgroundShapes.swift */,
+				FEE21CAE281D132900752B8C /* BG4.swift */,
+				FEE21C9A281D132800752B8C /* BigShape.swift */,
+				FEE21CAF281D132900752B8C /* Blob1Graphic.swift */,
+				FEE21CA1281D132800752B8C /* Blob2Graphic.swift */,
+				FEE21CA9281D132900752B8C /* Blob3Graphic.swift */,
+				FEE21C97281D132800752B8C /* BlobShapeTop.swift */,
+				FEE21CAC281D132900752B8C /* BoomerangBG.swift */,
+				FEE21C98281D132800752B8C /* BoomerangLeft.swift */,
+				FEE21CA0281D132800752B8C /* BoomerangLeftTop.swift */,
+				FEE21CA8281D132900752B8C /* BoomerangRight.swift */,
+				FEE21CB1281D132A00752B8C /* FaceGraphic.swift */,
+				FEE21C9E281D132800752B8C /* InsideFace1.swift */,
+				FEE21CA5281D132900752B8C /* InsideFace2.swift */,
+				FEE21CA3281D132900752B8C /* InsideFace3.swift */,
+				FEE21C99281D132800752B8C /* InsideFace4.swift */,
+				FEE21CB0281D132A00752B8C /* InsideFace5.swift */,
+				FEE21C9F281D132800752B8C /* Line1.swift */,
+				FEE21C96281D132800752B8C /* Line2.swift */,
+				FEE21CAA281D132900752B8C /* MaskBlur.swift */,
+				FEE21CAD281D132900752B8C /* PurplePlanet.swift */,
+				FEE21CA4281D132900752B8C /* RedPlanet.swift */,
+				FEE21CA7281D132900752B8C /* Stars.swift */,
+				FEE21C9C281D132800752B8C /* Wave.swift */,
+				FEE21C94281D132700752B8C /* Wave1.swift */,
+				FEE21C9D281D132800752B8C /* YellowPlanet.swift */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
 		FEE5DEA128137A0E0088583F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +413,9 @@
 			dependencies = (
 			);
 			name = "Learning App";
+			packageProductDependencies = (
+				FEE21CD1281D145F00752B8C /* SwiftUIX */,
+			);
 			productName = "Learning App";
 			productReference = FE07C83627E84CD90018049F /* Learning App.app */;
 			productType = "com.apple.product-type.application";
@@ -324,6 +444,9 @@
 				Base,
 			);
 			mainGroup = FE07C82D27E84CD80018049F;
+			packageReferences = (
+				FEE21CD0281D145F00752B8C /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = FE07C83727E84CD90018049F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,46 +474,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED6ABC3280F216D0072A961 /* SearchView.swift in Sources */,
+				FEE21CC5281D132A00752B8C /* Stars.swift in Sources */,
 				FE8DEA022804964C0079386A /* HomeView.swift in Sources */,
 				FEE5DE9A281306190088583F /* InputFile.swift in Sources */,
+				FEE21CC4281D132A00752B8C /* BackG2.swift in Sources */,
 				FED5937A281C0BCB0087FE3D /* Topic.swift in Sources */,
 				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
+				FEE21CB6281D132A00752B8C /* BoomerangLeft.swift in Sources */,
+				FEE21CC0281D132A00752B8C /* BackG3.swift in Sources */,
+				FEE21CCB281D132A00752B8C /* PurplePlanet.swift in Sources */,
 				FE5F255B2818612E0071CCE4 /* CourseSection.swift in Sources */,
 				FEE2AC41280AE43000FD9C2B /*  .swift in Sources */,
 				FE5627A527F0DE4700E74D05 /* HexagonView.swift in Sources */,
 				FED6ABC5280F2BCE0072A961 /* Suggestion.swift in Sources */,
 				FE47C24927E9111E003E18BF /* Styles.swift in Sources */,
+				FEE21CC6281D132A00752B8C /* BoomerangRight.swift in Sources */,
+				FEE21CBE281D132A00752B8C /* BoomerangLeftTop.swift in Sources */,
+				FEE21CCD281D132A00752B8C /* Blob1Graphic.swift in Sources */,
+				FEE21CB7281D132A00752B8C /* InsideFace4.swift in Sources */,
+				FEE21CB2281D132A00752B8C /* Wave1.swift in Sources */,
 				FEE5DE9E28136E300088583F /* ModalView.swift in Sources */,
+				FEE21CC1281D132A00752B8C /* InsideFace3.swift in Sources */,
 				FEE5DEA328145CE70088583F /* AvatarView.swift in Sources */,
+				FEE21CB4281D132A00752B8C /* Line2.swift in Sources */,
+				FEE21CBC281D132A00752B8C /* InsideFace1.swift in Sources */,
 				FE5F255928185AD40071CCE4 /* CircularView.swift in Sources */,
 				FED59372281BE5310087FE3D /* ExploreView.swift in Sources */,
+				FEE21CBF281D132A00752B8C /* Blob2Graphic.swift in Sources */,
 				FE108DA827F25E7400D022B1 /* Tab.swift in Sources */,
 				FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */,
+				FEE21CC2281D132A00752B8C /* RedPlanet.swift in Sources */,
+				FEE21CC7281D132A00752B8C /* Blob3Graphic.swift in Sources */,
 				FE6BE6E028104018002BBF83 /* AngularButtonStyle.swift in Sources */,
 				FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */,
 				FED59384281C66F70087FE3D /* NotficationsView.swift in Sources */,
+				FEE21CB9281D132A00752B8C /* AccountBackground.swift in Sources */,
+				FEE21CBD281D132A00752B8C /* Line1.swift in Sources */,
 				FE07C83C27E84CD90018049F /* ContentView.swift in Sources */,
+				FEE21CD6281D374C00752B8C /* Card.swift in Sources */,
 				FE8DEA122805FF8A0079386A /* Course.swift in Sources */,
 				FE07C83A27E84CD90018049F /* Learning_AppApp.swift in Sources */,
 				FEE5DE9C281321E90088583F /* GradientText.swift in Sources */,
+				FEE21CC8281D132A00752B8C /* MaskBlur.swift in Sources */,
+				FEE21CB8281D132A00752B8C /* BigShape.swift in Sources */,
 				FED59370281BE05C0087FE3D /* PlayView.swift in Sources */,
+				FEE21CB5281D132A00752B8C /* BlobShapeTop.swift in Sources */,
+				FEE21CCA281D132A00752B8C /* BoomerangBG.swift in Sources */,
+				FED5938B281D0C680087FE3D /* Onboarding.swift in Sources */,
 				FEE5DEA028136F100088583F /* SignInView.swift in Sources */,
+				FEE21CBB281D132A00752B8C /* YellowPlanet.swift in Sources */,
 				FE5F255D28186A9D0071CCE4 /* SectionRow.swift in Sources */,
 				FED59388281C68FF0087FE3D /* CertificateView.swift in Sources */,
 				FED5937C281C0BEE0087FE3D /* ListRow.swift in Sources */,
 				FEE2AC3F280AE33200FD9C2B /* CourseItem.swift in Sources */,
+				FEE21CCE281D132A00752B8C /* InsideFace5.swift in Sources */,
 				FED59386281C68510087FE3D /* LibraryView.swift in Sources */,
+				FEE21CB3281D132A00752B8C /* BackG1.swift in Sources */,
+				FEE21CDA281D40A400752B8C /* OnboardingCard.swift in Sources */,
+				FEE21CBA281D132A00752B8C /* Wave.swift in Sources */,
 				FE8DEA0A28049D5B0079386A /* FeaturedItem.swift in Sources */,
+				FEE21CCC281D132A00752B8C /* BG4.swift in Sources */,
 				FE6BE6DE28103036002BBF83 /* SignUpView.swift in Sources */,
 				FED59378281C06C40087FE3D /* HandbookItem.swift in Sources */,
 				FEE2AC43280AEE1500FD9C2B /* Animations.swift in Sources */,
 				FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */,
+				FEE21CC3281D132A00752B8C /* InsideFace2.swift in Sources */,
 				FE5F255F281871070071CCE4 /* SectionView.swift in Sources */,
+				FEE21CCF281D132A00752B8C /* FaceGraphic.swift in Sources */,
 				FED59374281BE5F40087FE3D /* SmallCourseItem.swift in Sources */,
 				FE4BD05B280D9A850026C6EF /* Model.swift in Sources */,
 				FE5627AB27F24F1C00E74D05 /* TabBar.swift in Sources */,
 				FE8DEA102805F4B00079386A /* AnimatableFontModifier.swift in Sources */,
 				FED59376281C06910087FE3D /* Handbook.swift in Sources */,
+				FEE21CC9281D132A00752B8C /* BackgroundShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +749,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEE21CD0281D145F00752B8C /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEE21CD1281D145F00752B8C /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEE21CD0281D145F00752B8C /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE07C82E27E84CD80018049F /* Project object */;
 }

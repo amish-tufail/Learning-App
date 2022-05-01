@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-
+import AudioToolbox // For Haptics
 struct SignInView: View {
+    let generator = UISelectionFeedbackGenerator() // For Haptics
     enum Field: Hashable { // For Email and Password button highlight
         case email
         case password
@@ -47,6 +48,9 @@ struct SignInView: View {
                         emailY = value
                         circleY = value
                     }
+                    .onTapGesture { // For Haptics
+                        generator.selectionChanged()
+                    }
                 SecureField("Password", text: $password)
                     .inputStyle(icon: "lock")
                     .textContentType(.password)
@@ -56,6 +60,9 @@ struct SignInView: View {
                     .overlay(geometry)
                     .onPreferenceChange(CirclePreferenceKey.self) { value in
                         passwordY = value
+                    }
+                    .onTapGesture { // For Haptics
+                        generator.selectionChanged()
                     }
                 Button {
                     isLogged = true

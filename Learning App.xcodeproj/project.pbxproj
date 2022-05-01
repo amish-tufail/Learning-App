@@ -12,6 +12,8 @@
 		FE07C83E27E84CDB0018049F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE07C83D27E84CDB0018049F /* Assets.xcassets */; };
 		FE07C84127E84CDB0018049F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE07C84027E84CDB0018049F /* Preview Assets.xcassets */; };
 		FE108DA827F25E7400D022B1 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE108DA727F25E7400D022B1 /* Tab.swift */; };
+		FE2FFAF3281E4C29003D3696 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FFAF2281E4C29003D3696 /* ImagePicker.swift */; };
+		FE2FFAF4281E4C29003D3696 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FFAF1281E4C29003D3696 /* VisualEffectBlur.swift */; };
 		FE47C24927E9111E003E18BF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24827E9111E003E18BF /* Styles.swift */; };
 		FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE47C24C27E973D9003E18BF /* AccountView.swift */; };
 		FE4BD05B280D9A850026C6EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BD05A280D9A850026C6EF /* Model.swift */; };
@@ -93,6 +95,8 @@
 		FE07C83D27E84CDB0018049F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE07C84027E84CDB0018049F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE108DA727F25E7400D022B1 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		FE2FFAF1281E4C29003D3696 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		FE2FFAF2281E4C29003D3696 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FE47C24827E9111E003E18BF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		FE47C24C27E973D9003E18BF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		FE4BD05A280D9A850026C6EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				FE8DEA05280498860079386A /* Components */,
 				FE8DEA062804988F0079386A /* Styles */,
 				FED59389281D0C0D0087FE3D /* Onboarding */,
+				FE2FFAF5281E4C3B003D3696 /* Helpers */,
 				FE07C83D27E84CDB0018049F /* Assets.xcassets */,
 				FE07C83F27E84CDB0018049F /* Preview Content */,
 			);
@@ -216,6 +221,15 @@
 				FE07C84027E84CDB0018049F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE2FFAF5281E4C3B003D3696 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FFAF2281E4C29003D3696 /* ImagePicker.swift */,
+				FE2FFAF1281E4C29003D3696 /* VisualEffectBlur.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FE8DEA032804984C0079386A /* Navigation */ = {
@@ -496,10 +510,12 @@
 				FEE5DE9E28136E300088583F /* ModalView.swift in Sources */,
 				FEE21CC1281D132A00752B8C /* InsideFace3.swift in Sources */,
 				FEE5DEA328145CE70088583F /* AvatarView.swift in Sources */,
+				FE2FFAF4281E4C29003D3696 /* VisualEffectBlur.swift in Sources */,
 				FEE21CB4281D132A00752B8C /* Line2.swift in Sources */,
 				FEE21CBC281D132A00752B8C /* InsideFace1.swift in Sources */,
 				FE5F255928185AD40071CCE4 /* CircularView.swift in Sources */,
 				FED59372281BE5310087FE3D /* ExploreView.swift in Sources */,
+				FE2FFAF3281E4C29003D3696 /* ImagePicker.swift in Sources */,
 				FEE21CBF281D132A00752B8C /* Blob2Graphic.swift in Sources */,
 				FE108DA827F25E7400D022B1 /* Tab.swift in Sources */,
 				FE8DEA0C28049EEC0079386A /* NavigationBar.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AngularButtonStyle: ButtonStyle {
+    @State var angle = 0.0
     @Environment(\.controlSize) var controlSize // ControlSize are pre-set Environment Object which help to style button
     var extraPadding: CGFloat { // To provide padding of the button based on the phone screen size
         switch controlSize {

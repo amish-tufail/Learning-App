@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct CourseView: View {
     var namespace: Namespace.ID
     var course: Course = courses[0]
+    let generator = UISelectionFeedbackGenerator()
     @Binding var show: Bool
     @State var appear = [false, false, false] // insfe
     @EnvironmentObject var model: Model
@@ -106,6 +108,7 @@ struct CourseView: View {
                     .onTapGesture {
                         selectedIndex = index
                         showSection = true
+                        generator.selectionChanged()
                     }
             }
         }
@@ -121,6 +124,7 @@ struct CourseView: View {
             withAnimation(.closeCard) {
                 show.toggle()
                 model.showDetail.toggle() // for navbar hidding
+                generator.selectionChanged()
             }
         } label: {
             Image(systemName: "xmark")

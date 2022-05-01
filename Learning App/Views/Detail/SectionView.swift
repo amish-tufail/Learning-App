@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct SectionView: View {
     var section: CourseSection = courseSections[0]
+    let generator = UISelectionFeedbackGenerator()
     @EnvironmentObject var model: Model
     @Environment(\.dismiss) var dismiss
     
@@ -74,6 +76,7 @@ struct SectionView: View {
     var button: some View {
         Button {
             dismiss()
+            generator.selectionChanged()
         } label: {
             Image(systemName: "xmark")
                 .font(.body.weight(.bold))

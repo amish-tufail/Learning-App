@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct SearchView: View {
+    let generator = UISelectionFeedbackGenerator()
     @State var text = ""
     @State var show = false
     @Namespace var namespace
@@ -40,6 +42,7 @@ struct SearchView: View {
                 ForEach(suggestions) { suggestion in // For Suggestion
                     Button {
                         text = suggestion.text
+                        generator.selectionChanged()
                     } label: {
                         Text(suggestion.text) // to show suggestions
                             .searchCompletion(suggestion.text) // puts the suggestion on the field
@@ -48,7 +51,10 @@ struct SearchView: View {
             }
             .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline) // to make the search bar not go in to larger mode
-            .navigationBarItems(trailing: Button { presentationModel.wrappedValue.dismiss() } label: { Text("Done").bold() }) // Adds the Done button
+            .navigationBarItems(trailing: Button {
+                presentationModel.wrappedValue.dismiss()
+                generator.selectionChanged()
+            } label: { Text("Done").bold() }) // Adds the Done button
             .sheet(isPresented: $show) {
                 CourseView(namespace: namespace, course: courses[selectedIndex], show: $show)
             }
@@ -66,6 +72,7 @@ struct SearchView: View {
                 Button {
                     show = true
                     selectedIndex = index
+                    generator.selectionChanged()
                 } label: {
                     HStack(alignment: .top, spacing: 12) {
                         Image(item.image)

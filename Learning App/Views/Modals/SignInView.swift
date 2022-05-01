@@ -7,6 +7,8 @@
 
 import SwiftUI
 import AudioToolbox // For Haptics
+import FirebaseAuth
+
 struct SignInView: View {
     let generator = UISelectionFeedbackGenerator() // For Haptics
     enum Field: Hashable { // For Email and Password button highlight
@@ -65,12 +67,22 @@ struct SignInView: View {
                         generator.selectionChanged()
                     }
                 Button {
-                    isLogged = true
+                    generator.selectionChanged()
+                    signin()
+//                    isLogged = true
                 } label: {
                     Text("Sign in")
                         .frame(maxWidth: .infinity)
                         .gradientForeground(colors: [.pink, .blue, .purple, .pink])
                     
+                }
+                .onAppear { // To show HomeView if user successfully logins
+                    Auth.auth()
+                        .addStateDidChangeListener { auth, user in
+                            if user != nil {
+                                isLogged = true
+                            }
+                        }
                 }
                 //            .buttonStyle(.borderedProminent)
                 //            .buttonStyle(AngularButtonStyle())
@@ -84,13 +96,37 @@ struct SignInView: View {
                     Text("No account yet?")
                     Button {
                         model.selectedModal = .signUp
+                        generator.selectionChanged()
                     } label: {
                         Text("**Sign up**")
                     }
+                    
                 }
                 .font(.footnote)
                 .foregroundColor(.secondary)
                 .accentColor(.secondary)
+                HStack {
+                    Text("Forgot password?")
+                    Button {
+                        print("Reset")
+                        generator.selectionChanged()
+                    } label: {
+                        Text("**Reset password**")
+                    }
+                    
+                }
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .accentColor(.secondary)
+                Divider()
+                Button {
+                    print("Sign in with Apple")
+                    generator.selectionChanged()
+                } label: { // Apple Button
+                    AppleButton1()
+                        .frame(height: 50)
+                        .cornerRadius(16)
+                }
             }
             .opacity(appear[2] ? 1 : 0)
             .offset(y: appear[2] ? 0 : 20)
@@ -139,6 +175,17 @@ struct SignInView: View {
     var geometry: some View {
         GeometryReader { proxy in
             Color.clear.preference(key: CirclePreferenceKey.self, value: proxy.frame(in: .named("container")).minY)
+        }
+    }
+    
+    func signin() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            print("User is Signed In")
+            isLogged = true
         }
     }
 }

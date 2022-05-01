@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Learning_AppApp: App {
     @StateObject var model = Model() // state object ensures that we will not call this many time
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

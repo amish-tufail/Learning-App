@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import AudioToolbox
 
 struct AccountView: View {
+    let generator = UISelectionFeedbackGenerator()
     @State var isDeleted = false
     @State var isPinned = false
     @Environment(\.dismiss) var dismiss // for Done Button
@@ -28,6 +31,8 @@ struct AccountView: View {
                 Button {
                     isLogged = false
                     dismiss()
+                    signOut()
+                    generator.selectionChanged()
                 } label: {
                     Text("Sign out")
                         .tint(.red)
@@ -38,7 +43,10 @@ struct AccountView: View {
             }
             .listStyle(.insetGrouped) // would adopt automatic to different devices
             .navigationTitle("Account")
-            .navigationBarItems(trailing: Button { dismiss() } label: { Text("Done").bold() })
+            .navigationBarItems(trailing: Button {
+                dismiss()
+                generator.selectionChanged()
+            } label: { Text("Done").bold() })
         }
     }
     
@@ -145,6 +153,15 @@ struct AccountView: View {
             
         }
         .tint(isPinned ? .gray : .yellow)
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            print("Logged Out")
+        } catch {
+            print("Already logged out")
+        }
     }
 }
 

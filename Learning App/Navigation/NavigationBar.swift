@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct NavigationBar: View {
+    let generator = UISelectionFeedbackGenerator()
     var title = ""
     @Binding var hasScrolled: Bool
     @State var showSearch = false // To show the search view on click
@@ -30,6 +32,7 @@ struct NavigationBar: View {
             HStack(spacing: 16) {
                 Button {
                     showSearch = true
+                    generator.selectionChanged()
                 } label: {
                     Image(systemName: "magnifyingglass")
                         .font(.body.weight(.bold))
@@ -44,9 +47,11 @@ struct NavigationBar: View {
                 Button {
                     if isLogged {
                         showAccount = true
+                        generator.selectionChanged()
                     } else {
                         withAnimation {
                             showModal = true
+                            generator.selectionChanged()
                         }
                     }
                 } label: {

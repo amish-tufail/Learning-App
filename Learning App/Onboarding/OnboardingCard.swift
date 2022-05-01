@@ -7,9 +7,10 @@
 
 import SwiftUI
 import SwiftUIX
-
+import AudioToolbox
 struct OnboardingCardView: View {
     var card: Card = cards[0]
+    let generator = UISelectionFeedbackGenerator()
     @AppStorage("selection") var selection = 0
     @Binding var showShoudlOnBoarding: Bool
     var body: some View {
@@ -65,6 +66,7 @@ struct OnboardingCardView: View {
                     showShoudlOnBoarding.toggle()
                     selection = 0
                 }
+                generator.selectionChanged()
             } label: {
                 Text(card.button.uppercased())
                     .font(.caption.weight(.semibold))

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import AudioToolbox
+import FirebaseAuth
 
 struct SignUpView: View {
+    let generator = UISelectionFeedbackGenerator()
     enum Field: Hashable { // For Email and Password button highlight
         case email
         case password
@@ -21,6 +24,7 @@ struct SignUpView: View {
     @State var circleColor: Color = .blue
     @State var appear = [false, false, false]
     @EnvironmentObject var model: Model
+    @AppStorage("isLogged") var isLogged = false
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Sign up")
@@ -46,6 +50,9 @@ struct SignUpView: View {
                         emailY = value
                         circleY = value
                     }
+                    .onTapGesture { // For Haptics
+                        generator.selectionChanged()
+                    }
                 SecureField("Password", text: $password)
                     .inputStyle(icon: "lock")
                     .textContentType(.password)
@@ -56,11 +63,26 @@ struct SignUpView: View {
                     .onPreferenceChange(CirclePreferenceKey.self) { value in
                         passwordY = value
                     }
-                Button {} label: {
+                    .onTapGesture { // For Haptics
+                        generator.selectionChanged()
+                    }
+                Button {
+                    generator.selectionChanged()
+                    signup()
+//                    isLogged = true
+                } label: {
                     Text("Create Account")
                         .frame(maxWidth: .infinity)
                         .gradientForeground(colors: [.pink, .blue, .purple, .pink])
                     
+                }
+                .onAppear { // To show HomeView if user successfully logins
+                    Auth.auth()
+                        .addStateDidChangeListener { auth, user in
+                            if user != nil {
+                                isLogged = true
+                            }
+                        }
                 }
                 //            .buttonStyle(.borderedProminent)
                 //            .buttonStyle(AngularButtonStyle())
@@ -72,12 +94,13 @@ struct SignUpView: View {
                 Text("By clicking on  ")
                 + Text("_Create Account_")
                     .foregroundColor(.primary.opacity(0.7))
-                + Text(", you agree to out **Terms of Service** and **[Privacy Policy](https://apple.com)**")
+                + Text(", you agree to out **Terms of Service** and **Privacy Policy**")
                 Divider()
                 HStack {
                     Text("Already have an account?")
                     Button {
                         model.selectedModal = .signIn
+                        generator.selectionChanged()
                     } label: {
                         Text("**Sign in**")
                     }
@@ -85,6 +108,15 @@ struct SignUpView: View {
                 .font(.footnote)
                 .foregroundColor(.secondary)
                 .accentColor(.secondary)
+//                Divider()
+                Button {
+                    print("Sign up with Apple")
+                    generator.selectionChanged()
+                } label: { // Apple Button
+                    AppleButton2()
+                        .frame(height: 50)
+                        .cornerRadius(16)
+                }
             }
             .opacity(appear[2] ? 1 : 0)
             .offset(y: appear[2] ? 0 : 20)
@@ -133,6 +165,17 @@ struct SignUpView: View {
     var geometry: some View {
         GeometryReader { proxy in
             Color.clear.preference(key: CirclePreferenceKey.self, value: proxy.frame(in: .named("container")).minY)
+        }
+    }
+    
+    func signup() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            print("User Signed Up!")
+            isLogged = true
         }
     }
 }

@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-
+import AudioToolbox
 struct HomeView: View {
+    let generator = UISelectionFeedbackGenerator()
     @State var hasScrolled = false
     @Namespace var namespace
     @State var show = false // to show Course Item on false and Course View on true
@@ -142,6 +143,7 @@ struct HomeView: View {
                         model.showDetail.toggle() // toggles for tab bar
                         showStatusBar = false
                         selectedID = course.id
+                        generator.selectionChanged()
                     }
             }
             .accessibilityElement(children: .combine)

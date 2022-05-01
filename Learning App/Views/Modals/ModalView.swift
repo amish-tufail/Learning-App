@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct ModalView: View {
+    let generator = UISelectionFeedbackGenerator()
     @EnvironmentObject var model: Model
     @AppStorage("showModal") var showModal = true
     @State var viewState: CGSize = .zero
@@ -47,9 +49,9 @@ struct ModalView: View {
                     .allowsHitTesting(false) // To avoid blob getting in the way of tap end background gesture
                     .accessibility(hidden: true)
             )
-
             Button {
                 dismissModal()
+                generator.selectionChanged()
             } label: {
                 Image(systemName: "xmark")
                     .font(.body.weight(.bold))

@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct TabBar: View {
+    let generator = UISelectionFeedbackGenerator()
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @State var color: Color = .teal
     @State var tabItemWidth: CGFloat = 0
@@ -41,6 +43,7 @@ struct TabBar: View {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                     selectedTab = item.tab
                     color = item.color
+                    generator.selectionChanged()
                 }
             } label: {
                 VStack(spacing: 0) {

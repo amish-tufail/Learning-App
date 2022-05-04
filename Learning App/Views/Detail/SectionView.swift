@@ -7,18 +7,27 @@
 
 import SwiftUI
 import AudioToolbox
+import AVKit
 
 struct SectionView: View {
+    @State var showQuiz = false
     var section: CourseSection = courseSections[0]
     let generator = UISelectionFeedbackGenerator()
+    @State var player = AVPlayer()
+    @State var showVideo = false
     @EnvironmentObject var model: Model
     @Environment(\.dismiss) var dismiss
-    
     var body: some View {
         ZStack {
             ScrollView {
                 cover
-                    .overlay(PlayView().overlay(CircularView(value: section.progress, lineWidth: 5).padding(24)))
+                    .overlay(
+                        Button {
+                            showVideo = true
+                        } label: {
+                            PlayView().overlay(CircularView(value: section.progress, lineWidth: 5).padding(24))
+                        }
+                    )
                 content
                     .offset(y: 120)
                     .padding(.bottom, 200)
@@ -27,6 +36,15 @@ struct SectionView: View {
             .ignoresSafeArea()
             
             button
+            
+            if showVideo {
+                VideoView(videoName: section.video)
+            }
+        }
+        .statusBar(hidden: true)
+        .fullScreenCover(isPresented: $showQuiz) {
+            WelcomeView()
+                .statusBar(hidden: true)
         }
     }
     
@@ -50,7 +68,7 @@ struct SectionView: View {
                 .aspectRatio(contentMode: .fill)
         )
         .mask(
-            RoundedRectangle(cornerRadius: 0, style: .continuous)
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
         )
         .overlay(
             overlayContent
@@ -100,7 +118,6 @@ struct SectionView: View {
             Text(section.text)
                 .font(.footnote)
             Divider()
-                .opacity(0)
             HStack {
                 Image("Avatar Default")
                     .resizable()
@@ -109,10 +126,12 @@ struct SectionView: View {
                     .padding(8)
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .strokeStyle(cornerRadius: 18)
-                Text("Taught by Meng To")
+                Text("Taught by Amish")
                     .font(.footnote)
             }
-            .opacity(0)
+            .onTapGesture {
+                showQuiz = true
+            }
         }
             .padding(20)
             .background(

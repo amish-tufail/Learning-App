@@ -31,7 +31,6 @@ struct HomeView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
-                
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {  // using to layout for different screen sizes, spacing is for rows here, inner spacing is for column
                     if !show {
                         cards
@@ -61,7 +60,6 @@ struct HomeView: View {
             if show {
                 detail
             }
-            
         }
         .statusBar(hidden: !showStatusBar)
         .onChange(of: show) { newValue in
@@ -74,6 +72,7 @@ struct HomeView: View {
             }
         }
     }
+    
     var scrollDetection: some View {
         GeometryReader { proxy in
 //                Text("\(proxy.frame(in: .named("scroll")).minY)")
@@ -118,9 +117,7 @@ struct HomeView: View {
 //                    Text("\(proxy.frame(in: .global).minX)")
                         .accessibilityElement(children: .combine) // To combine all element of featured item as one for voiceover
                         .accessibilityAddTraits(.isButton)
-                }
-                
-            }
+                }            }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 430)
@@ -129,9 +126,11 @@ struct HomeView: View {
                 .offset(x: 250, y: -100)
                 .accessibility(hidden: true) // To hide it in voiceover
         )
-        .sheet(isPresented: $showCourse) {
+        .fullScreenCover(isPresented: $showCourse) {
             CourseView(namespace: namespace, course: featuredCourses[selectedIndex],  show: $showCourse)
+                .statusBar(hidden: true)
         }
+        
     }
     
     var cards: some View {
@@ -168,6 +167,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.dark)
             .environmentObject(Model()) 
     }
 }

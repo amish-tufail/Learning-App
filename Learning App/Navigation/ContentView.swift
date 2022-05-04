@@ -30,7 +30,6 @@ struct ContentView: View {
 //            }
             TabBar()
                 .offset(y: model.showDetail ? 200 : 0)
-            
             if showModal {
                 ModalView()
                     .zIndex(1)
@@ -43,6 +42,7 @@ struct ContentView: View {
         .dynamicTypeSize(.large ... .xxLarge) // Applies to all the views
         .fullScreenCover(isPresented: $shoudlShowOnboarding) {
             Onboarding(shoudlShowOnboarding: $shoudlShowOnboarding)
+                .statusBar(hidden: true)
         }
     }
 }

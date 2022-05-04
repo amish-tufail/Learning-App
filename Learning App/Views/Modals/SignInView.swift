@@ -194,7 +194,8 @@ struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
              SignInView()
-                .environmentObject(Model() )
+                .environmentObject(Model())
+                .statusBar(hidden: true)
         }
     }
 }

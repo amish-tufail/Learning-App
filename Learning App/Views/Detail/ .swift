@@ -53,7 +53,6 @@ struct CourseView: View {
         .onChange(of: show) { newValue in // To disspear them instantly ( taught one )
             fadeOut()
         }
-        
     }
     
     var cover: some View {
@@ -87,7 +86,7 @@ struct CourseView: View {
             .mask(
                 {
                     // cornerRadius: appear[0] ? 0 : 30.0, style: .continuous
-                    RoundedRectangle(cornerRadius: 0, style: .continuous) // appear rmoves the corner radius on the background when the view is loaded completely
+                    RoundedRectangle(cornerRadius: 30, style: .continuous) // appear rmoves the corner radius on the background when the view is loaded completely
                         .matchedGeometryEffect(id: "mask\(course.id)", in: namespace)
                         .offset(y: scrollY > 0 ? -scrollY : 0) // For parallex Effect, here it clips the content
                 }
@@ -115,7 +114,7 @@ struct CourseView: View {
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
         .strokeStyle(cornerRadius: 30)
         .padding(20)
-        .sheet(isPresented: $showSection) {
+        .fullScreenCover(isPresented: $showSection) {
             SectionView(section: courseSections[selectedIndex])
         }
     }
@@ -239,6 +238,6 @@ struct CourseView_Previews: PreviewProvider {
     @Namespace static var namespace // only for preview
     static var previews: some View {
         CourseView(namespace: namespace, show: .constant(true))
-            .environmentObject(Model( ))
+            .environmentObject(Model())
     }
 }

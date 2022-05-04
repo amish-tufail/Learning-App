@@ -15,6 +15,7 @@ struct ModalView: View {
     @State var viewState: CGSize = .zero
     @State var isDismissed = false
     @State var appear = [false, false , false]
+    @State var showStatusBar = false
     @AppStorage("isLogged") var isLogged = false
     var body: some View {
         ZStack {

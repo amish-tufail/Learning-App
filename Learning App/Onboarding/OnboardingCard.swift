@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIX
 import AudioToolbox
+
 struct OnboardingCardView: View {
     var card: Card = cards[0]
     let generator = UISelectionFeedbackGenerator()

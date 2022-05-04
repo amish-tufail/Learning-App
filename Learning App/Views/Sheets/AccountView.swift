@@ -29,7 +29,9 @@ struct AccountView: View {
                 .accentColor(.primary)
                 links
                 Button {
-                    isLogged = false
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        isLogged = false
+                    }
                     dismiss()
                     signOut()
                     generator.selectionChanged()

@@ -1,0 +1,104 @@
+{
+    "results": [
+        {
+            "id": 0,
+            "question": "What keyword is used to define a constant in Swift?",
+            "correct_answer": "var",
+            "incorrect_answers": [
+                "const",
+                "let",
+                "const var"
+            ]
+        },
+        {
+            "id": 1,
+            "question": "How large is an Int?",
+            "correct_Answer": "64 bits",
+            "incorrect_answers": [
+                "16 bits",
+                "32 bits",
+                "It depends on the platform"
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Structures can't:",
+            "correct_Answer": "Conform to protocols to provide standard functionality of a certain kind",
+            "incorrect_answers": [
+                "Define properties to store values",
+                "Define initializers to set up their initial state",
+                "Inherit the characteristics of another structure"
+            ]
+        },
+        {
+            "id": 3,
+            "question": "What is the type and value of str in the following expression?",
+            "correct_Answer": "Type: String, Value: \"12.0\"",
+            "incorrect_answers": [                "Type: String?, Value: \"12.0\"",
+                "Type: String, Value: \"12\"",
+                "Type: String?, Value: nil"
+            ]
+        },
+        {
+            "id": 4,
+            "question": "What operator takes two numbers, and returns a boolean?",
+            "correct_Answer": "all of the above",
+            "incorrect_answers": [
+                "<",
+                ">",
+                "==",
+                "!=",
+            ]
+        },
+        {
+            "id": 5,
+            "question": "What does the following code output?",
+            "correct_Answer": "3",
+            "answeincorrect_answersrs": [
+                "0",
+                "6",
+                "10"
+            ]
+        },
+        {
+            "id": 6,
+            "question": "What is the following function's return type?",
+            "correct_Answer": "Bool",
+            "incorrect_answers": [
+                "String",
+                "Int",
+                "It doesn't have a return type"
+            ]
+        },
+        {
+            "id": 7,
+            "question": "Structures can't:",
+            "correct_Answer": "Conform to protocols to provide standard functionality of a certain kind",
+            "incorrect_answers": [
+                "Define properties to store values",
+                "Define initializers to set up their initial state",
+                "Inherit the characteristics of another structure"
+            ]
+        },
+        {
+            "id": 8,
+            "question": "Why might you throw an error?",
+            "correct_Answer": "The code has become too complicated to continue writing",
+            "incorrect_answers": [
+                "The code has become too easy",
+                "Something unexpected happened and the normal flow of execution can't continue",
+                "To pass data to a caller method"
+            ]
+        },
+        {
+            "id": 9,
+            "question": "How can you deal with an error?",
+            "correct_Answer": "By informing the user of the failure",
+            "incorrect_answers": [
+                "By correcting the problem",
+                "By trying an alternative approach",
+                "All of the above"
+            ]
+        }
+    ]
+}

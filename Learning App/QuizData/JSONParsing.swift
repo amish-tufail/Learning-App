@@ -22,7 +22,8 @@ class JSONParsing{
             do {
                 let QuizData = try decoder.decode([Result].self, from: data)
                 for idValue in QuizData {
-                    idValue.id = UUID()
+                    var uId = idValue
+                    uId.id = UUID()
                 }
                 return QuizData
             } catch {

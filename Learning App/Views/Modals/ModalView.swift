@@ -16,6 +16,7 @@ struct ModalView: View {
     @State var isDismissed = false
     @State var appear = [false, false , false]
     @State var showStatusBar = false
+    @AppStorage("showAlertView") var showAlertView: Bool = false
     @AppStorage("isLogged") var isLogged = false
     var body: some View {
         ZStack {
@@ -64,6 +65,10 @@ struct ModalView: View {
             .padding(20)
             .opacity(appear[1] ? 1 : 0)
             .offset(y: appear[1] ? 0 : -200)
+            if showAlertView {
+                Alert()
+                    .zIndex(1)
+            }
         }
         .onAppear {
             withAnimation(.easeOut) {

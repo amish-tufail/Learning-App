@@ -39,8 +39,6 @@ struct QuestionView: View {
                             .cornerRadius(30)
                             .padding(9.0)
                             .background(Color(UIColor.systemBackground).opacity(0.1), in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-                            .strokeStyle(cornerRadius: 30)
-                        
                     }
                     .padding()
                     VStack(alignment: .leading) {
@@ -74,7 +72,7 @@ struct QuestionView: View {
                 Spacer()
             }
             VStack(spacing: 30) {
-                Spacer()
+//                Spacer()
 //                Spacer()
                 AnswerRow(answer: Answer(text: "Define properties to store values", isCorrect: false))
                 AnswerRow(answer:  Answer(text: "Define initializers to set up their initial state", isCorrect: false))
@@ -91,7 +89,7 @@ struct QuestionView: View {
                 }
             }
             .padding()
-            .offset(y:20)
+            .offset(y: 90)
         }
         .navigationBarHidden(true)
         .fullScreenCover(isPresented: $showFinish) {

@@ -23,6 +23,10 @@ struct SignUpView: View {
     @State var passwordY: CGFloat = 0
     @State var circleColor: Color = .blue
     @State var appear = [false, false, false]
+    @FocusState var showKeyboard: Bool
+    @AppStorage("showAlertView") var showAlertView: Bool = false
+    @AppStorage("alertTitle") var alertTitle: String = ""
+    @AppStorage("alertMessage") var alertMessage: String = ""
     @EnvironmentObject var model: Model
     @AppStorage("isLogged") var isLogged = false
     var body: some View {
@@ -44,6 +48,7 @@ struct SignUpView: View {
                     .disableAutocorrection(true)
                 // For Button Animation
                     .focused($focusedField, equals: .email)
+                    .focused($showKeyboard)
                     .shadow(color: focusedField == .email ? .primary.opacity(0.3) : .clear, radius: 10, x: 0, y: 3)
                     .overlay(geometry)
                     .onPreferenceChange(CirclePreferenceKey.self) { value in
@@ -58,6 +63,7 @@ struct SignUpView: View {
                     .textContentType(.password)
                 // For Button Animation
                     .focused($focusedField, equals: .password)
+                    .focused($showKeyboard)
                     .shadow(color: focusedField == .password ? .primary.opacity(0.3) : .clear, radius: 10, x: 0, y: 3)
                     .overlay(geometry)
                     .onPreferenceChange(CirclePreferenceKey.self) { value in
@@ -70,6 +76,7 @@ struct SignUpView: View {
                     generator.selectionChanged()
                     signup()
 //                    isLogged = true
+                    showKeyboard = false
                 } label: {
                     Text("Create Account")
                         .frame(maxWidth: .infinity)
@@ -171,7 +178,9 @@ struct SignUpView: View {
     func signup() {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             guard error == nil else {
-                print(error!.localizedDescription)
+                self.alertTitle = "Alert"
+                self.alertMessage = (error!.localizedDescription)
+                self.showAlertView.toggle()
                 return
             }
             print("User Signed Up!")

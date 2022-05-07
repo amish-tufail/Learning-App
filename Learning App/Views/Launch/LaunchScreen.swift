@@ -34,7 +34,7 @@ struct LaunchScreen: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation(.easeInOut) {
                         self.isActive = true
-                    } 
+                    }
                 }
             }
 

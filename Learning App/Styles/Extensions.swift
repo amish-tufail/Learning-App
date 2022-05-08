@@ -9,8 +9,7 @@ import SwiftUI
 
 extension View {
     func blurBackground() -> some View {
-        self
-            .padding(16)
+        self.padding(16)
             .background(Color("Background 1"))
             .background(VisualEffectBlur(blurStyle: .systemUltraThinMaterialDark))
             .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)

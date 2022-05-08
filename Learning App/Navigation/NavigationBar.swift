@@ -60,8 +60,8 @@ struct NavigationBar: View {
                 .accessibilityElement() // Forcing to use it for voiceover
                 .accessibilityLabel("Account") // To have a accessible name
                 .accessibilityAddTraits(.isButton) // To make it think it is a button
-                .sheet(isPresented: $showAccount) { // to show Account View on click
-                    AccountView()
+                .fullScreenCover(isPresented: $showAccount) { // to show Account View on click
+                    ProfileView()
                 }
             }
             .frame(maxWidth: .infinity, alignment: .trailing)

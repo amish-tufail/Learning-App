@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import AudioToolbox
 
 struct ProfileView: View {
+    let generator = UISelectionFeedbackGenerator()
     @Environment(\.colorScheme) var colorScheme
     @State private var contentOffset = CGFloat(0)
+    @AppStorage("isLogged") var isLogged = false
+    @AppStorage("isLiteMode") var isLiteMode = true
+    @Environment(\.dismiss) var dismiss // for Done Button
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
                 TrackableScrollView(offsetChanged: { offset in
                     contentOffset = offset.y
-                    print("contentOffset", contentOffset)
                 })
                 {
                     content
+                        .padding(.top, 20)
                 }
                 VisualEffectBlur(blurStyle: .systemMaterial)
                     .opacity(contentOffset < -16 ? 1 : 0)
@@ -32,50 +38,139 @@ struct ProfileView: View {
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle()) // For iPad
-        .accentColor(colorScheme == .dark ? .white : Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))) // For navtitle color
+//        .accentColor(colorScheme == .dark ? .white : Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))) // For navtitle color
     }
     
     var content: some View {
-        VStack {
-            ProfileRow()
+        ZStack {
             VStack {
-                NavigationLink {
-                    FAQView()
-                } label: {
-                    MenuRow()
+                ProfileRow()
+                    .padding(.top, 10)
+                VStack {
+                    NavigationLink {
+                        HistoryView()
+                    } label: {
+                        MenuRow(title: "History", leftIcon: "arrow.counterclockwise")
+                    }
+                    divider
+                    NavigationLink {
+                        FavoritesView()
+                    } label: {
+                        MenuRow(title:"Favorties", leftIcon: "star.fill")
+                    }
+                    divider
+                    NavigationLink {
+                        DownloadsView()
+                    } label: {
+                        MenuRow(title:"Downloads", leftIcon: "square.and.arrow.down.fill")
+                    }
+                    divider
+                    NavigationLink {
+                        UpdatesView()
+                    } label: {
+                        MenuRow(title:"Updates", leftIcon: "newspaper.fill")
+                    }
                 }
-                divider
-                NavigationLink {
-                    PackagesView()
-                } label: {
-                    MenuRow(title:"SwiftUI Packages", leftIcon: "square.stack.fill")
+                .blurBackground()
+                .padding(.top, 20)
+                VStack {
+                    NavigationLink {
+                        Text("Edit Profile")
+                    } label: {
+                        MenuRow(title: "Edit Profile", leftIcon: "gearshape.fill")
+                    }
+                    divider
+                    NavigationLink {
+                        Text("Billing")
+                    } label: {
+                        MenuRow(title:"Billing", leftIcon: "gift.fill")
+                    }
+                    divider
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isLogged = false
+                        }
+                        dismiss()
+                        signOut()
+                        generator.selectionChanged()
+                    } label: {
+                        MenuRow(title:"Sign Out", leftIcon: "pip.exit")
+                    }
                 }
-                divider 
-                Link(destination: URL(string: "https://youtube.com")!) {
-                    MenuRow(title: "Youtube Channel", leftIcon: "play.rectangle.fill", rightIcon: "link")
+                .blurBackground()
+                .padding(.top, 20)
+                VStack {
+                    NavigationLink {
+                        FAQView()
+                    } label: {
+                        MenuRow()
+                    }
+                    divider
+                    NavigationLink {
+                        PackagesView()
+                    } label: {
+                        MenuRow(title:"SwiftUI Packages", leftIcon: "square.stack.fill")
+                    }
+                    divider
+                    Link(destination: URL(string: "https://discord.com")!) {
+                        MenuRow(title: "Discord Community", leftIcon: "ellipsis.bubble.fill", rightIcon: "link")
+                    }
+                    divider
+                    Link(destination: URL(string: "https://youtube.com")!) {
+                        MenuRow(title: "Youtube Channel", leftIcon: "play.rectangle.fill", rightIcon: "link")
+                    }
                 }
-            }
-            .blurBackground()
-            .padding(.top, 20)
-            VStack {
-                Text("Learnzilla © 2022")
-                Text("Version 1.00")
+                .blurBackground()
+                .padding(.top, 20)
+                VStack {
+                    MenuRow(title: "Privacy Policy", leftIcon: "doc.fill", rightIcon: "link")
+                    divider
+                    MenuRow(title: "Terms of Sevice", leftIcon: "doc.fill", rightIcon: "link")
+                }
+                .blurBackground()
+                .padding(.top, 20)
+                VStack {
+                    Text("Learnzilla © 2022")
+                    Text("Version 1.00")
+                }
+                .foregroundColor(.white)
+                .opacity(0.7)
+                .padding(.top, 20)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 10)
+                .font(.footnote)
             }
             .foregroundColor(.white)
-            .opacity(0.7)
             .padding(.top, 20)
             .padding(.horizontal, 20)
             .padding(.bottom, 10)
-            .font(.footnote)
+            Button {
+                dismiss()
+                generator.selectionChanged()
+            } label: {
+                Image(systemName: "arrow.backward")
+                    .font(.body.weight(.bold))
+                    .foregroundColor(.secondary)
+                    .padding(8)
+                    .background(.ultraThinMaterial, in: Circle())
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding()
+            .offset(y: -40)
         }
-        .foregroundColor(.white)
-        .padding(.top, 20)
-        .padding(.horizontal, 20)
-        .padding(.bottom, 10)
     }
     
     var divider: some View {
         Divider().background(Color.white.blendMode(.overlay))
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            print("Logged Out")
+        } catch {
+            print("Already logged out")
+        }
     }
 }
 

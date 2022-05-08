@@ -59,6 +59,10 @@
 		FE8DEA0E2804AD8D0079386A /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */; };
 		FE8DEA102805F4B00079386A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */; };
 		FE8DEA122805FF8A0079386A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DEA112805FF8A0079386A /* Course.swift */; };
+		FEABD89528285DDF009FD61C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABD89428285DDF009FD61C /* HistoryView.swift */; };
+		FEABD89728285DED009FD61C /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABD89628285DED009FD61C /* UpdatesView.swift */; };
+		FEABD89928285DFE009FD61C /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABD89828285DFE009FD61C /* DownloadsView.swift */; };
+		FEABD89B28285E18009FD61C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEABD89A28285E18009FD61C /* FavoritesView.swift */; };
 		FEC6C7B22822791B00B88D38 /* Video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FEC6C7B12822791B00B88D38 /* Video1.mp4 */; };
 		FEC6C7B428227E8500B88D38 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C7B328227E8500B88D38 /* VideoView.swift */; };
 		FEC6C7B72822B05900B88D38 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C7B62822B05900B88D38 /* PrimaryButton.swift */; };
@@ -175,6 +179,10 @@
 		FE8DEA0D2804AD8D0079386A /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		FE8DEA0F2805F4B00079386A /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		FE8DEA112805FF8A0079386A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FEABD89428285DDF009FD61C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		FEABD89628285DED009FD61C /* UpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesView.swift; sourceTree = "<group>"; };
+		FEABD89828285DFE009FD61C /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		FEABD89A28285E18009FD61C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		FEC6C7B12822791B00B88D38 /* Video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video1.mp4; sourceTree = "<group>"; };
 		FEC6C7B328227E8500B88D38 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		FEC6C7B62822B05900B88D38 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -254,8 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				FE32CEA62826E563000D78C2 /* ProfileView.swift */,
-				FE027E892826FCD1004C62DB /* FAQView.swift */,
-				FE027E8B2826FD17004C62DB /* PackagesView.swift */,
+				FEABD89C28285F27009FD61C /* ProfileSubViews */,
 				FE7346062827E95D009DE628 /* Utils */,
 			);
 			path = ProfileSheet;
@@ -417,6 +424,19 @@
 				FE7346012827E613009DE628 /* FAQ.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FEABD89C28285F27009FD61C /* ProfileSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FE027E892826FCD1004C62DB /* FAQView.swift */,
+				FE027E8B2826FD17004C62DB /* PackagesView.swift */,
+				FEABD89428285DDF009FD61C /* HistoryView.swift */,
+				FEABD89628285DED009FD61C /* UpdatesView.swift */,
+				FEABD89828285DFE009FD61C /* DownloadsView.swift */,
+				FEABD89A28285E18009FD61C /* FavoritesView.swift */,
+			);
+			path = ProfileSubViews;
 			sourceTree = "<group>";
 		};
 		FEC6C7AE282278A700B88D38 /* Video */ = {
@@ -662,6 +682,7 @@
 				FE73460A2827EA11009DE628 /* FAQRow.swift in Sources */,
 				FED6ABC3280F216D0072A961 /* SearchView.swift in Sources */,
 				FE2AED172822D80C00896613 /* Answer.swift in Sources */,
+				FEABD89728285DED009FD61C /* UpdatesView.swift in Sources */,
 				FEE21CC5281D132A00752B8C /* Stars.swift in Sources */,
 				FE8DEA022804964C0079386A /* HomeView.swift in Sources */,
 				FEE5DE9A281306190088583F /* InputFile.swift in Sources */,
@@ -673,6 +694,7 @@
 				FEE21CB6281D132A00752B8C /* BoomerangLeft.swift in Sources */,
 				FEE21CC0281D132A00752B8C /* BackG3.swift in Sources */,
 				FEE21CCB281D132A00752B8C /* PurplePlanet.swift in Sources */,
+				FEABD89928285DFE009FD61C /* DownloadsView.swift in Sources */,
 				FE5F255B2818612E0071CCE4 /* CourseSection.swift in Sources */,
 				FEC6C7B428227E8500B88D38 /* VideoView.swift in Sources */,
 				FEE2AC41280AE43000FD9C2B /*  .swift in Sources */,
@@ -709,6 +731,7 @@
 				FEE21CC7281D132A00752B8C /* Blob3Graphic.swift in Sources */,
 				FE6BE6E028104018002BBF83 /* AngularButtonStyle.swift in Sources */,
 				FE5627A727F2351C00E74D05 /* BlobView.swift in Sources */,
+				FEABD89528285DDF009FD61C /* HistoryView.swift in Sources */,
 				FED59384281C66F70087FE3D /* NotficationsView.swift in Sources */,
 				FEE21CB9281D132A00752B8C /* AccountBackground.swift in Sources */,
 				FEE21CBD281D132A00752B8C /* Line1.swift in Sources */,
@@ -729,6 +752,7 @@
 				FEE5DEA028136F100088583F /* SignInView.swift in Sources */,
 				FE32CEAD2826EF3D000D78C2 /* GradientIcon.swift in Sources */,
 				FE7346022827E613009DE628 /* FAQ.swift in Sources */,
+				FEABD89B28285E18009FD61C /* FavoritesView.swift in Sources */,
 				FEE21CBB281D132A00752B8C /* YellowPlanet.swift in Sources */,
 				FE7346002827E2D4009DE628 /* PackageRow.swift in Sources */,
 				FE5F255D28186A9D0071CCE4 /* SectionRow.swift in Sources */,

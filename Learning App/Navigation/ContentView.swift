@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("shouldShowOnboarding") var shoudlShowOnboarding: Bool = true // Changed from State to AppStorage to view it only once
+    @State var shoudlShowOnboarding: Bool = true // Changed from State to AppStorage to view it only once
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @AppStorage("showModal") var showModal = false // To connect Modal to the nav bar
     @EnvironmentObject var model: Model

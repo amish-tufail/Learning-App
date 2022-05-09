@@ -20,7 +20,9 @@ struct UpdatesView: View {
                 content
             }
 
-            VisualEffectBlur(blurStyle: .systemMaterial)
+            Color.clear
+                .background(.ultraThinMaterial)
+                .blur(radius: 10)
                 .opacity(contentOffset < -16 ? 1 : 0)
                 .animation(Animation.easeIn, value: contentOffset)
                 .ignoresSafeArea()

@@ -26,7 +26,9 @@ struct ProfileView: View {
                     content
                         .padding(.top, 20)
                 }
-                VisualEffectBlur(blurStyle: .systemMaterial)
+                Color.clear
+                    .background(.ultraThinMaterial)
+                    .blur(radius: 10)
                     .opacity(contentOffset < -16 ? 1 : 0)
                     .animation(Animation.easeIn, value: contentOffset)
                     .ignoresSafeArea()

@@ -12,6 +12,8 @@ struct HistoryView: View {
     let generator = UISelectionFeedbackGenerator()
     @State private var contentOffset = CGFloat(0)
     @Environment(\.dismiss) var dismiss
+    var section: CourseSection = courseSections[0]
+    var course: Course = courses[0]
     var body: some View {
         ZStack(alignment: .top) {
             TrackableScrollView(offsetChanged: { offsetPoint in
@@ -19,7 +21,6 @@ struct HistoryView: View {
             }) {
                 content
             }
-
             Color.clear
                 .background(.ultraThinMaterial)
                 .blur(radius: 10)

@@ -37,6 +37,9 @@ struct PackagesView: View {
     var content: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 16.0) {
+                Text("Packages")
+                    .font(.title, weight: .bold)
+                    .foregroundColor(.primary)
                 Text("This app was 100% made using SwiftUI. We’d like to thank these amazing Swift Packages for making our lives as creators easier.")
                     .font(.subheadline)
                     .opacity(0.7)

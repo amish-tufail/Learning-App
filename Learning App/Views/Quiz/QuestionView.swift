@@ -29,7 +29,6 @@ struct QuestionView: View {
                                 .frame(width: 26.0, height: 26.0)
                                 .cornerRadius(10.0)
                                 .padding(9.0)                                .background(Color(UIColor.systemBackground).opacity(0.1), in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-                                .strokeStyle(cornerRadius: 20)
                         }
                         Spacer()
                         Image(course.logo)

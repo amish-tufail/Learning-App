@@ -78,6 +78,64 @@ struct SectionView: View {
     
     var content: some View {
         VStack(alignment: .leading, spacing: 30) {
+            HStack {
+                Spacer()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Take Test".uppercased())
+                            .foregroundColor(.primary)
+                            .font(.footnote, weight: .semibold)
+                            .padding(.bottom, 1)
+                        Text("Answer question,")
+                            .foregroundColor(.primary.opacity(0.7))
+                            .font(.caption)
+                        Text("Gain Certficate")
+                            .foregroundColor(.primary.opacity(0.7))
+                            .font(.caption)
+                    }
+                    Image(systemName: "highlighter")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(8)
+                        .background(
+                            Circle()
+                                .stroke()
+                                .fill(.gray.opacity(0.2))
+                        )
+                }
+                .frame(width: 185, height: 80)
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .onTapGesture {
+                    showQuiz = true
+                }
+                Spacer()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Download".uppercased())
+                            .foregroundColor(.primary)
+                            .font(.footnote, weight: .semibold)
+                            .padding(.bottom, 1)
+                        Text("Watch offline")
+                            .foregroundColor(.primary.opacity(0.7))
+                            .font(.caption)
+                        Text("35.55MB filesize")
+                            .foregroundColor(.primary.opacity(0.7))
+                            .font(.caption)
+                    }
+                    Image(systemName: "square.and.arrow.down")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(8)
+                        .background(
+                            Circle()
+                                .stroke()
+                                .fill(.gray.opacity(0.2))
+                        )
+                }
+                .frame(width: 185, height: 80)
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                Spacer()
+            }
             Text("SwiftUI is hands-down the best way for designers to take a first step into code. ")
                 .font(.title3).fontWeight(.medium)
             Text("This course")
@@ -129,24 +187,22 @@ struct SectionView: View {
                 Text("Taught by Amish")
                     .font(.footnote)
             }
-            .onTapGesture {
-                showQuiz = true
-            }
         }
-            .padding(20)
-            .background(
-                Rectangle()
-                    .fill(.ultraThinMaterial)
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            )
-            .offset(y: 250)
-            .padding(20)
+        .padding(20)
+        .background(
+            Rectangle()
+                .fill(.ultraThinMaterial)
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        )
+        .offset(y: 250)
+        .padding(20)
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
         SectionView()
+            .preferredColorScheme(.dark)
     }
 }
 

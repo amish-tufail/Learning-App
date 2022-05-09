@@ -37,6 +37,9 @@ struct FAQView: View {
     var content: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 16.0) {
+                Text("FAQ")
+                    .font(.title, weight: .bold)
+                    .foregroundColor(.primary)
                 ForEach(faqData, id: \.id) { faq in
                     FAQRow(faq: faq)
                 }

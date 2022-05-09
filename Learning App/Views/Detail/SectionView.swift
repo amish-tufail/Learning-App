@@ -36,15 +36,18 @@ struct SectionView: View {
             .ignoresSafeArea()
             
             button
-            
-            if showVideo {
-                VideoView(videoName: section.video)
-            }
+//
+//            if showVideo {
+//                VideoView(videoName: section.video)
+//            }
         }
         .statusBar(hidden: true)
         .fullScreenCover(isPresented: $showQuiz) {
             WelcomeView()
                 .statusBar(hidden: true)
+        }
+        .fullScreenCover(isPresented: $showVideo) {
+            VideoView(videoName: section.video)
         }
     }
     

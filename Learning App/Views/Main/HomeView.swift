@@ -17,7 +17,7 @@ struct HomeView: View {
     @State var showCourse = false // For Featured -> Course View
     @State var selectedIndex = 0 // For Featured -> Course View
     @EnvironmentObject var model: Model
-    @AppStorage("isLiteMode") var isLiteMode = true
+    @AppStorage("isLiteMode") var isLiteMode = false
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea() // OffWhite Color

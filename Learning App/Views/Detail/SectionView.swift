@@ -22,10 +22,30 @@ struct SectionView: View {
             ScrollView {
                 cover
                     .overlay(
-                        Button {
-                            showVideo = true
-                        } label: {
-                            PlayView().overlay(CircularView(value: section.progress, lineWidth: 5).padding(24))
+                        VStack(spacing: 30) {
+                            Button {
+                                showVideo = true
+                            } label: {
+                                PlayView().overlay(CircularView(value: section.progress, lineWidth: 8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 56, style: .continuous)
+                                            .stroke(.white.opacity(0.2))
+                                    )
+                            }
+                            VStack(spacing: 3) {
+                                Text("Watch video")
+                                    .font(.callout, weight: .semibold)
+                                    .foregroundColor(.primary)
+                                Text("12:55")
+                                    .foregroundColor(.primary.opacity(0.7))
+                                    .font(.footnote)
+                            }
+                            .frame(width: 120, height: 55)
+                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                                    .stroke(.white.opacity(0.2))
+                            )
                         }
                     )
                 content
@@ -180,7 +200,7 @@ struct SectionView: View {
                 .font(.footnote)
             Divider()
             HStack {
-                Image("Avatar Default")
+                Image("Profile3")
                     .resizable()
                     .frame(width: 26, height: 26)
                     .cornerRadius(10)

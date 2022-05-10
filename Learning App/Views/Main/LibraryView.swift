@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @State var showCertificates: Bool = false
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -27,6 +28,11 @@ struct LibraryView: View {
                             .offset(y: -60)
                     )
                     .padding(20)
+                    .onTapGesture {
+                        withAnimation {
+                            showCertificates = true
+                        }
+                    }
                 Text("History".uppercased())
                     .titleStyle() // custom modifier
                 coursesSection
@@ -41,6 +47,9 @@ struct LibraryView: View {
                 NavigationBar(title: "Library", hasScrolled: .constant(true))
             )
             .background(Image("Blob 1").offset(x: -100, y: -400))
+        }
+        .fullScreenCover(isPresented: $showCertificates) {
+            CertificateCardView()
         }
     }
     

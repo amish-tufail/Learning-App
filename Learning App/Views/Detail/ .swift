@@ -152,7 +152,7 @@ struct CourseView: View {
             Divider()
                 .opacity(appear[0] ? 1 : 0)
             HStack {
-                Image("Avatar Default")
+                Image("Profile3")
                     .resizable()
                     .frame(width: 26, height: 26)
                     .cornerRadius(10)

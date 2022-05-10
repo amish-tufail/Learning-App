@@ -11,11 +11,12 @@ import AudioToolbox
 
 struct ProfileView: View {
     let generator = UISelectionFeedbackGenerator()
-    @Environment(\.colorScheme) var colorScheme
-    @State private var contentOffset = CGFloat(0)
+    @State var showCertificates: Bool = false
+    @State var contentOffset = CGFloat(0)
     @AppStorage("isLogged") var isLogged = false
     @AppStorage("isLiteMode") var isLiteMode = true
     @Environment(\.dismiss) var dismiss // for Done Button
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
@@ -48,6 +49,10 @@ struct ProfileView: View {
             VStack {
                 ProfileRow()
                     .padding(.top, 10)
+                    .onTapGesture {
+                        showCertificates = true
+                        generator.selectionChanged()
+                    }
                 VStack {
                     NavigationLink {
                         HistoryView()
@@ -146,6 +151,9 @@ struct ProfileView: View {
             .padding(.top, 20)
             .padding(.horizontal, 20)
             .padding(.bottom, 10)
+            .fullScreenCover(isPresented: $showCertificates) {
+                CertificateCardView()
+            }
             Button {
                 dismiss()
                 generator.selectionChanged()

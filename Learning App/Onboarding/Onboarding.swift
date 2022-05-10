@@ -7,10 +7,13 @@
 
 import SwiftUI
 import SwiftUIX
+import AudioToolbox
 
 struct Onboarding: View {
-    @Binding var shoudlShowOnboarding: Bool
+    let generator = UISelectionFeedbackGenerator()
     @AppStorage("selection") var selection = 0
+    @Binding var shoudlShowOnboarding: Bool
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
             background
@@ -21,7 +24,6 @@ struct Onboarding: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            
             .background(
                 ZStack {
                     FaceGraphic(selection: $selection)
@@ -29,6 +31,19 @@ struct Onboarding: View {
                     Blob2Graphic(selection: $selection)
                 }
             )
+            Button {
+                dismiss()
+                generator.selectionChanged()
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.body.weight(.bold))
+                    .foregroundColor(.secondary)
+                    .padding(6)
+                    .background(.ultraThinMaterial, in: Circle())
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+            .padding(20)
+            .offset(y: -30)
         }
     }
     

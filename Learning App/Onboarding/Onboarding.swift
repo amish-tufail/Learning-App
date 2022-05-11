@@ -36,14 +36,17 @@ struct Onboarding: View {
                 generator.selectionChanged()
             } label: {
                 Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .font(.system(size: 14))
                     .font(.body.weight(.bold))
                     .foregroundColor(.secondary)
-                    .padding(6)
-                    .background(.ultraThinMaterial, in: Circle())
+                    .padding(4)
+                    .background(VisualEffectBlurView(blurStyle: .systemThinMaterialDark))
+                    .mask(Circle())
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .padding(20)
-            .offset(y: -30)
+            .offset(y: 30)
         }
     }
     

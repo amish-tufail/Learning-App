@@ -41,11 +41,28 @@ struct ProfileRow: View {
                 })
                 
             VStack {
-                Image("Profile3")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 66, height: 66, alignment: .center)
+                    Section {
+                        AsyncImage(url: URL(string: "https://picsum.photos/200"), transaction: Transaction(animation: .easeOut)) {
+                            phase in // To deal with different cases
+                            switch phase {
+                            case .success(let image):
+                                image.resizable()
+                                    .transition(.scale(scale: 0.5, anchor: .center)) // For animation when an image loads
+                            case .empty:
+                                ProgressView()
+                            case .failure(_):
+                                Color.gray
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
+                    }
+                    .frame(width: 66, height: 66)
                     .cornerRadius(50)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: 66, height: 66, alignment: .center)
+//                    .cornerRadius(50)
             }
             .overlay(
                 Circle()

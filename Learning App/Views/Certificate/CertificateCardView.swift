@@ -7,6 +7,8 @@
 
 import SwiftUI
 import AudioToolbox
+import SwiftUIX
+
 struct CertificateCardView: View {
     let generator = UISelectionFeedbackGenerator()
     @State var selection = 0
@@ -35,10 +37,12 @@ struct CertificateCardView: View {
                 generator.selectionChanged()
             } label: {
                 Image(systemName: "xmark")
+                    .foregroundColor(.white)
                     .font(.body.weight(.bold))
                     .foregroundColor(.secondary)
                     .padding(6)
-                    .background(.ultraThinMaterial, in: Circle())
+                    .background(VisualEffectBlurView(blurStyle: .systemThinMaterialDark))
+                    .mask(Circle())
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .padding(20)

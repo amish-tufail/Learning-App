@@ -95,7 +95,8 @@ struct OnboardingCardView: View {
                     .init(color: Color(#colorLiteral(red: 0.7291666269302368, green: 0.7562500238418579, blue: 1, alpha: 1)), location: 0.5629924535751343),
                     .init(color: Color(#colorLiteral(red: 1, green: 0.6083333492279053, blue: 0.8732843995094299, alpha: 1)), location: 1)]),
                         startPoint: UnitPoint(x: 1.0125392039427847, y: 1.0175438863216821),
-                        endPoint: UnitPoint(x: -1.1102230246251565e-16, y: 0)), lineWidth: 2).blur(radius: 3))
+                        endPoint: UnitPoint(x: -1.1102230246251565e-16, y: 0)), lineWidth: 2))
+                //.blur(radius: 3) -> with lineWidth: 2
                     
             }
 //            .controlSize(.small) // Button Size

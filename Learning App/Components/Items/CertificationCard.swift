@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CertificationCard: View {
     var course: Course = featuredCourses[0]
-//    @Binding var selection: Intx
+    @AppStorage("isLiteMode") var isLiteMode = false
     var body: some View {
         ZStack {
             Image("CertificateBackground")
@@ -28,7 +28,10 @@ struct CertificationCard: View {
         )
         .background(VisualEffectBlur(blurStyle: .systemUltraThinMaterialDark))
         .clipShape(RoundedRectangle(cornerRadius: 30.0, style: .continuous))
-        .shadow(color: Color(#colorLiteral(red: 0.1647058824, green: 0.1098039216, blue: 0.3568627451, alpha: 1)).opacity(0.5), radius: 30, x: 0, y: 15)
+        .if(!isLiteMode, transform: { view in
+                view.shadow(color: Color(#colorLiteral(red: 0.1647058824, green: 0.1098039216, blue: 0.3568627451, alpha: 1)).opacity(0.5), radius: 30, x: 0, y: 15)
+        })
+      
     }
     
     var content: some View {

@@ -81,6 +81,13 @@ struct ProfileView: View {
                 .blurBackground()
                 .padding(.top, 20)
                 VStack {
+                    NotificationsRow()
+                    divider
+                    LiteModeRow()
+                }
+                .blurBackground()
+                .padding(.top, 20)
+                VStack {
                     NavigationLink {
                         Text("Edit Profile")
                     } label: {

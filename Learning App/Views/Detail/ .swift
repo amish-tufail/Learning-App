@@ -231,7 +231,6 @@ struct CourseView: View {
         }
         isDragaable = false
     }
-    
 }
 
 struct CourseView_Previews: PreviewProvider {

@@ -18,5 +18,5 @@ struct Card: Identifiable {
 var cards = [
     Card(title: "Learn \ndesign \nand code", text: "Learn by building real apps using Swift, React, Flutter and more. Design files and source code are included for each course.", time: "120 hours of video", button: "Get Started"),
     Card(title: "Gain \ncertificates \nand progress", text: "Take tests and receive a certificate after completion. You can track your progress for each course and pick up where you left.", time: "Test your skills", button: "Next"),
-    Card(title: "Watch \non iPhone, iPad \nand web", text: "Take tests and receive a certificate after completion. You can track your progress for each course and pick up where you left.", time: "Learn anywhere", button: "Close")
+    Card(title: "Watch \non iPhone, iPad \nand web", text: "Watch anywhere and sync your progress across all platforms. Download videos for offline viewing.", time: "Learn anywhere", button: "Close")
 ]

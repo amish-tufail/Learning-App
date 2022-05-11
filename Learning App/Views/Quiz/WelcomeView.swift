@@ -53,9 +53,9 @@ struct WelcomeView: View {
                         .padding(8)
                         .background(.ultraThinMaterial, in: Circle())
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(25)
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
             }
         }
     }

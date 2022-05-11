@@ -23,8 +23,8 @@ struct PrimaryButton: View {
         Text(text)
             .font(.caption.weight(.semibold))
             .foregroundColor(.white)
-            .padding()
-            .padding(.horizontal)
+            .padding(.horizontal, 10)
+            .padding(10)
             .background(background)
             .cornerRadius(30)
             .shadow(color: Color("Shadow"), radius: 10, x: 0, y: 5)
@@ -42,8 +42,8 @@ struct PrimaryButton: View {
                             startPoint: UnitPoint(x: 1.0125392039427847, y: 1.0175438863216821),
                             endPoint: UnitPoint(x: -1.1102230246251565e-16, y: 0))
             )
-            .padding()
-            .padding(.horizontal)
+            .padding(.horizontal, 10)
+            .padding(10)
             .overlay(Capsule().stroke(LinearGradient(
                 gradient: Gradient(stops: [
             .init(color: Color(#colorLiteral(red: 0.03333336114883423, green: 0.5024509429931641, blue: 1, alpha: 1)), location: 0),

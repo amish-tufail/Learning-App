@@ -31,22 +31,22 @@ struct Onboarding: View {
                     Blob2Graphic(selection: $selection)
                 }
             )
-            Button {
-                dismiss()
-                generator.selectionChanged()
-            } label: {
-                Image(systemName: "xmark")
-                    .foregroundColor(.white)
-                    .font(.system(size: 14))
-                    .font(.body.weight(.bold))
-                    .foregroundColor(.secondary)
-                    .padding(4)
-                    .background(VisualEffectBlurView(blurStyle: .systemThinMaterialDark))
-                    .mask(Circle())
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-            .padding(20)
-            .offset(y: 30)
+//            Button {
+//                dismiss()
+//                generator.selectionChanged()
+//            } label: {
+//                Image(systemName: "xmark")
+//                    .foregroundColor(.white)
+//                    .font(.system(size: 14))
+//                    .font(.body.weight(.bold))
+//                    .foregroundColor(.secondary)
+//                    .padding(4)
+//                    .background(VisualEffectBlurView(blurStyle: .systemThinMaterialDark))
+//                    .mask(Circle())
+//            }
+//            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+//            .padding(20)
+//            .offset(y: 30)
         }
     }
     
@@ -72,22 +72,3 @@ struct Onboarding_Previews: PreviewProvider {
         Onboarding(shoudlShowOnboarding: .constant(true))
     }
 }
-
-
-//background
-//TabView(selection: $selection) {
-//    ForEach(Array(cards.enumerated()), id:\.offset) { index, card in
-//        OnboardingCardView(card: card)
-//            .tag(index)
-//    }
-//}
-//.tabViewStyle(PageTabViewStyle())
-//
-//.background(
-//    ZStack {
-//        FaceGraphic(selection: $selection)
-//        Blob1Graphic(selection: $selection)
-//        Blob2Graphic(selection: $selection)
-//    }
-//)
-

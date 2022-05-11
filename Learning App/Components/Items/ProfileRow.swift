@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileRow: View {
+    @State private var angle: Double = 0
     @AppStorage("isLiteMode") var isLiteMode: Bool = false
     var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
@@ -34,35 +35,40 @@ struct ProfileRow: View {
                 .resizable()
                 .font(.system(size: 66))
                 .angularGradientGlow(colors: [Color(#colorLiteral(red: 0.2274509804, green: 0.4, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.2156862745, green: 1, blue: 0.6235294118, alpha: 1)), Color(#colorLiteral(red: 1, green: 0.9176470588, blue: 0.1960784314, alpha: 1)), Color(#colorLiteral(red: 1, green: 0.2039215686, blue: 0.2745098039, alpha: 1))])
+                .rotationEffect(Angle(degrees: angle))
                 .frame(width: 66, height: 66)
                 .if(!isLiteMode, transform: { view in
                     view
-                .blur(radius: 10)
+                        .blur(radius: 10)
                 })
-                
+                .onAppear {
+                withAnimation(.linear(duration: 7)) {
+                    self.angle += 350
+                }
+            }
             VStack {
-                    Section {
-                        AsyncImage(url: URL(string: "https://picsum.photos/200"), transaction: Transaction(animation: .easeOut)) {
-                            phase in // To deal with different cases
-                            switch phase {
-                            case .success(let image):
-                                image.resizable()
-                                    .transition(.scale(scale: 0.5, anchor: .center)) // For animation when an image loads
-                            case .empty:
-                                ProgressView()
-                            case .failure(_):
-                                Color.gray
-                            @unknown default:
-                                EmptyView()
-                            }
+                Section {
+                    AsyncImage(url: URL(string: "https://picsum.photos/200"), transaction: Transaction(animation: .easeOut)) {
+                        phase in // To deal with different cases
+                        switch phase {
+                        case .success(let image):
+                            image.resizable()
+                                .transition(.scale(scale: 0.5, anchor: .center)) // For animation when an image loads
+                        case .empty:
+                            ProgressView()
+                        case .failure(_):
+                            Color.gray
+                        @unknown default:
+                            EmptyView()
                         }
                     }
-                    .frame(width: 66, height: 66)
-                    .cornerRadius(50)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: 66, height: 66, alignment: .center)
-//                    .cornerRadius(50)
+                }
+                .frame(width: 66, height: 66)
+                .cornerRadius(50)
+                //                    .resizable()
+                //                    .aspectRatio(contentMode: .fill)
+                //                    .frame(width: 66, height: 66, alignment: .center)
+                //                    .cornerRadius(50)
             }
             .overlay(
                 Circle()

@@ -68,9 +68,13 @@
 		FEB2EBC2282ACF7F002B4C84 /* CertificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2EBC1282ACF7F002B4C84 /* CertificationCard.swift */; };
 		FEBFE355282C0FB1000189D2 /* NotificationsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE354282C0FB1000189D2 /* NotificationsRow.swift */; };
 		FEBFE357282C1131000189D2 /* LiteModeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE356282C1131000189D2 /* LiteModeRow.swift */; };
-		FEBFE359282C132B000189D2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FEBFE358282C132B000189D2 /* FirebaseAnalytics */; };
-		FEBFE35B282C132B000189D2 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FEBFE35A282C132B000189D2 /* FirebaseMessaging */; };
 		FEBFE35D282C28F2000189D2 /* BillingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE35C282C28F2000189D2 /* BillingView.swift */; };
+		FEBFE363282C2FE8000189D2 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE362282C2FE8000189D2 /* GradientButton.swift */; };
+		FEBFE365282C386E000189D2 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE364282C386E000189D2 /* Purchase.swift */; };
+		FEBFE367282C4418000189D2 /* GradientProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE366282C4417000189D2 /* GradientProfilePictureView.swift */; };
+		FEBFE369282C48DF000189D2 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE368282C48DF000189D2 /* EditProfileView.swift */; };
+		FEBFE36B282C4A07000189D2 /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE36A282C4A07000189D2 /* GradientTextField.swift */; };
+		FEBFE36D282C4ABB000189D2 /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFE36C282C4ABB000189D2 /* TextFieldIcon.swift */; };
 		FEC6C7B22822791B00B88D38 /* Video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FEC6C7B12822791B00B88D38 /* Video1.mp4 */; };
 		FEC6C7B428227E8500B88D38 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C7B328227E8500B88D38 /* VideoView.swift */; };
 		FEC6C7B72822B05900B88D38 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C7B62822B05900B88D38 /* PrimaryButton.swift */; };
@@ -197,6 +201,12 @@
 		FEBFE354282C0FB1000189D2 /* NotificationsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRow.swift; sourceTree = "<group>"; };
 		FEBFE356282C1131000189D2 /* LiteModeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteModeRow.swift; sourceTree = "<group>"; };
 		FEBFE35C282C28F2000189D2 /* BillingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingView.swift; sourceTree = "<group>"; };
+		FEBFE362282C2FE8000189D2 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		FEBFE364282C386E000189D2 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		FEBFE366282C4417000189D2 /* GradientProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProfilePictureView.swift; sourceTree = "<group>"; };
+		FEBFE368282C48DF000189D2 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		FEBFE36A282C4A07000189D2 /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
+		FEBFE36C282C4ABB000189D2 /* TextFieldIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		FEC6C7B12822791B00B88D38 /* Video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video1.mp4; sourceTree = "<group>"; };
 		FEC6C7B328227E8500B88D38 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		FEC6C7B62822B05900B88D38 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -264,10 +274,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEBFE35B282C132B000189D2 /* FirebaseMessaging in Frameworks */,
 				FEE21CD2281D145F00752B8C /* SwiftUIX in Frameworks */,
 				FE94803F28287FA900557F92 /* FirebaseAuth in Frameworks */,
-				FEBFE359282C132B000189D2 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +470,7 @@
 				FEABD89828285DFE009FD61C /* DownloadsView.swift */,
 				FEABD89A28285E18009FD61C /* FavoritesView.swift */,
 				FEBFE35C282C28F2000189D2 /* BillingView.swift */,
+				FEBFE368282C48DF000189D2 /* EditProfileView.swift */,
 			);
 			path = ProfileSubViews;
 			sourceTree = "<group>";
@@ -562,6 +571,7 @@
 				FED5936F281BE05C0087FE3D /* PlayView.swift */,
 				FE2FFB1C281E6F58003D3696 /* AppleButton.swift */,
 				FE73460F2827ECF0009DE628 /* SecondaryButton.swift */,
+				FEBFE362282C2FE8000189D2 /* GradientButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -573,6 +583,10 @@
 				FE5627A627F2351C00E74D05 /* BlobView.swift */,
 				FE5F255828185AD40071CCE4 /* CircularView.swift */,
 				FEDD6EE428240695008756F8 /* Alert.swift */,
+				FEBFE364282C386E000189D2 /* Purchase.swift */,
+				FEBFE366282C4417000189D2 /* GradientProfilePictureView.swift */,
+				FEBFE36A282C4A07000189D2 /* GradientTextField.swift */,
+				FEBFE36C282C4ABB000189D2 /* TextFieldIcon.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -653,8 +667,6 @@
 			packageProductDependencies = (
 				FEE21CD1281D145F00752B8C /* SwiftUIX */,
 				FE94803E28287FA900557F92 /* FirebaseAuth */,
-				FEBFE358282C132B000189D2 /* FirebaseAnalytics */,
-				FEBFE35A282C132B000189D2 /* FirebaseMessaging */,
 			);
 			productName = "Learning App";
 			productReference = FE07C83627E84CD90018049F /* Learning App.app */;
@@ -729,6 +741,7 @@
 				FEE21CC4281D132A00752B8C /* BackG2.swift in Sources */,
 				FED5937A281C0BCB0087FE3D /* Topic.swift in Sources */,
 				FE027E8C2826FD17004C62DB /* PackagesView.swift in Sources */,
+				FEBFE365282C386E000189D2 /* Purchase.swift in Sources */,
 				FE2FFB1D281E6F58003D3696 /* AppleButton.swift in Sources */,
 				FE47C24D27E973D9003E18BF /* AccountView.swift in Sources */,
 				FEE21CB6281D132A00752B8C /* BoomerangLeft.swift in Sources */,
@@ -752,11 +765,13 @@
 				FEE5DE9E28136E300088583F /* ModalView.swift in Sources */,
 				FEB2EBC2282ACF7F002B4C84 /* CertificationCard.swift in Sources */,
 				FE2AED222822FAAB00896613 /* Quiz.swift in Sources */,
+				FEBFE369282C48DF000189D2 /* EditProfileView.swift in Sources */,
 				FEE21CC1281D132A00752B8C /* InsideFace3.swift in Sources */,
 				FEE5DEA328145CE70088583F /* AvatarView.swift in Sources */,
 				FEC6C7B72822B05900B88D38 /* PrimaryButton.swift in Sources */,
 				FE2AED152822D38A00896613 /* ProgressBar.swift in Sources */,
 				FEBFE35D282C28F2000189D2 /* BillingView.swift in Sources */,
+				FEBFE36D282C4ABB000189D2 /* TextFieldIcon.swift in Sources */,
 				FEBFE355282C0FB1000189D2 /* NotificationsRow.swift in Sources */,
 				FE2FFAF4281E4C29003D3696 /* VisualEffectBlur.swift in Sources */,
 				FEE21CB4281D132A00752B8C /* Line2.swift in Sources */,
@@ -789,12 +804,14 @@
 				FEE21CC8281D132A00752B8C /* MaskBlur.swift in Sources */,
 				FEE21CB8281D132A00752B8C /* BigShape.swift in Sources */,
 				FED59370281BE05C0087FE3D /* PlayView.swift in Sources */,
+				FEBFE36B282C4A07000189D2 /* GradientTextField.swift in Sources */,
 				FE32CEA92826E60B000D78C2 /* TrackableScrollView.swift in Sources */,
 				FEE21CB5281D132A00752B8C /* BlobShapeTop.swift in Sources */,
 				FEE21CCA281D132A00752B8C /* BoomerangBG.swift in Sources */,
 				FED5938B281D0C680087FE3D /* Onboarding.swift in Sources */,
 				FEE5DEA028136F100088583F /* SignInView.swift in Sources */,
 				FE32CEAD2826EF3D000D78C2 /* GradientIcon.swift in Sources */,
+				FEBFE363282C2FE8000189D2 /* GradientButton.swift in Sources */,
 				FE7346022827E613009DE628 /* FAQ.swift in Sources */,
 				FEABD89B28285E18009FD61C /* FavoritesView.swift in Sources */,
 				FEE21CBB281D132A00752B8C /* YellowPlanet.swift in Sources */,
@@ -826,6 +843,7 @@
 				FE4BD05B280D9A850026C6EF /* Model.swift in Sources */,
 				FEEB58802823317E009DAD67 /* FinishView.swift in Sources */,
 				FE5627AB27F24F1C00E74D05 /* TabBar.swift in Sources */,
+				FEBFE367282C4418000189D2 /* GradientProfilePictureView.swift in Sources */,
 				FE7346082827E978009DE628 /* ModelData.swift in Sources */,
 				FE027E8A2826FCD1004C62DB /* FAQView.swift in Sources */,
 				FE7346122827ED36009DE628 /* Extensions.swift in Sources */,
@@ -1060,16 +1078,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE94803D28287FA900557F92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		FEBFE358282C132B000189D2 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE94803D28287FA900557F92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		FEBFE35A282C132B000189D2 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE94803D28287FA900557F92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
 		};
 		FEE21CD1281D145F00752B8C /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -89,13 +89,13 @@ struct ProfileView: View {
                 .padding(.top, 20)
                 VStack {
                     NavigationLink {
-                        Text("Edit Profile")
+                        EditProfileView()
                     } label: {
                         MenuRow(title: "Edit Profile", leftIcon: "gearshape.fill")
                     }
                     divider
                     NavigationLink {
-                        Text("Billing")
+                        BillingView()
                     } label: {
                         MenuRow(title:"Billing", leftIcon: "gift.fill")
                     }

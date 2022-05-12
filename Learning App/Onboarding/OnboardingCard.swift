@@ -102,6 +102,7 @@ struct OnboardingCardView: View {
 //            .controlSize(.small) // Button Size
             .offset(x: 0, y: 240)
         )
+//        .spotlight(enabled: true, title: "To Go Next")
         .frame(height: 600)
         .background(LinearGradient(
                         gradient: Gradient(stops: [

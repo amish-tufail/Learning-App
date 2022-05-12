@@ -70,6 +70,7 @@ struct EditProfileView: View {
                         .keyboardType(.default)
                     GradientButton(buttonTitle: "Save Settings") {
                         generator.selectionChanged()
+                        dismiss()
                     }
                     Spacer()
                 }

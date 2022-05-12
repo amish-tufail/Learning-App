@@ -42,3 +42,36 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 }
+
+//extension View {
+//    func spotlight(enabled: Bool, title: String = " ") -> some View {
+//        return self
+//            .overlay {
+//                if enabled {
+//                    SpotlightView(title: title) {
+//                        self
+//                    }
+//                }
+//            }
+//    }
+//}
+//
+//struct OnboardingCard_SpotLight_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingCardView(showShoudlOnBoarding: .constant(true))
+//    }
+//}
+//
+//struct SpotlightView<Content: View>: View {
+//    var content: Content
+//    var title: String
+//    init(title: String, @ViewBuilder content: @escaping ()->Content) {
+//        self.content = content()
+//        self.title = title
+//    }
+//    var body: some View {
+//        Rectangle()
+//            .fill(.red)
+//    }
+//}
+
